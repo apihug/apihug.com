@@ -20,6 +20,8 @@
 
 # 🖖 Intro
 
+[ApiHug 简介](./docs/introduction/what-is-apihug.md)
+
 # 🔥 Handbook
 
 # 📚 Tutorials
@@ -32,3 +34,6 @@
 4. [开放和协同](./docs/principles/why-open-is-important.md)
 
 # 🙋‍♀️ Contact Us
+
+
+![ApiHug](./docs/public/apihug-platform.svg)
