@@ -9,10 +9,10 @@
 
 
 <p align="center">
-  <a href="https://github.com/apihug/apihug.com/docs/handbook"><b>🔥 Handbook</b></a>  •
-  <a href="https://github.com/apihug/apihug.com/docs/design" target="_blank"><b>⚙️ Design</b></a> •
-  <a href="https://github.com/apihug/apihug.com/docs/usecase"><b>📚  Use Case</b></a> •
-  <a href="https://github.com/apihug/apihug.com/docs/us"><b>🙋‍♀️ Contact</b></a>
+  <a href="https://github.com/apihug/apihug.com/blob/master/docs/handbook/README.md"><b>🔥 Handbook</b></a>  •
+  <a href="https://github.com/apihug/apihug.com/blob/master/docs/design/README.md" target="_blank"><b>⚙️ Design</b></a> •
+  <a href="https://github.com/apihug/apihug.com/blob/master/docs/usecase/README.md"><b>📚  Use Case</b></a> •
+  <a href="https://github.com/apihug/apihug.com/blob/master/docs/us/README.md"><b>🙋‍♀️ Contact</b></a>
 </p>
 
 
