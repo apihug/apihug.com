@@ -26,6 +26,8 @@
 
 # 📚 Tutorials
 
+[Hope Guide Git](https://github.com/apihug/hope-guides)
+
 # 💎 Design Principles
 
 1. [极具同理心](./docs/principles/why-empathy-is-important.md)
