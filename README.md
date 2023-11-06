@@ -26,6 +26,7 @@
 
 # 📚 Tutorials
 
+[Start ApiHug in 5 Mins](./docs/handbook/001_very_begin.md)
 [Hope Guide Git](https://github.com/apihug/hope-guides)
 
 # 💎 Design Principles
