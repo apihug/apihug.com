@@ -20,7 +20,7 @@
 
 # 🖖 Intro
 
-[ApiHug 简介](./docs/introduction/what-is-apihug.md)
+1. [ApiHug 简介](./docs/introduction/what-is-apihug.md)
 
 # 🔥 Handbook
 
