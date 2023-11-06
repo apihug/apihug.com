@@ -17,6 +17,7 @@
 
 <h1 align="center"> 🤗 ApiHug × {Postman|Swagger|Apifox} <br/>= 快↑ 准√ 省↓</h1>
 
+当前版本： **0.2.3-RELEASE**  `@2023-11-06`
 
 # 🖖 Intro
 
