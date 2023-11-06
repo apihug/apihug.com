@@ -15,7 +15,7 @@ Apihug 包含组件
 
 ## 快速跑个例子
 
-版本 [发行信息](../release/README.md)， 当前最新 `0.2.2-RELEASE`
+版本 [发行信息](../release/README.md)， 当前最新 `0.2.3-RELEASE` (未到1.0.0前，版本升级比较快，注意通知)
 
 例子 [Hope Guide Git](https://github.com/apihug/hope-guides)
 
