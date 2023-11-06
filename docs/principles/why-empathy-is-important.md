@@ -42,11 +42,11 @@ Empathy is sincerely visualizing yourself in the shoes of the person who has los
 
 她不仅用来具象、加强您的品牌在客户中的形象，更便捷你传递其他的价值和观点给客户。 
 
-更甚在面对棘手的客户纠纷、产品延迟、线上事故等， 更能引起客户的共鸣，为你在处理这些问题时候提供更多的缓冲。 
+更甚在面对棘手的客户纠纷、产品延迟、线上事故等， 更能引起客户的共鸣，为你在处理这些问题时候提供更多的缓冲。
 
 当思考用户的需求和愿望时，同理心帮助你带入他们的视角，而给你一个全新完全不同的视野。
 
-更不用说UX/UI 上面设计师对于使用同理心的技巧， UX设计者几乎都基于同理性，时刻讲以用户为中心铭记在心。 
+更不用说UX/UI 上面设计师对于使用同理心的技巧， UX设计者几乎都基于同理性，时刻将用户为中心铭记在心。
 
 如 [交互设计基金](https://www.interaction-design.org/literature/article/creating-personas-from-user-research-results)
 
