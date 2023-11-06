@@ -212,7 +212,7 @@ Proto OAS 协议扩展解析编译插件 + 模板代码生成。
 | dependencies.artifact.groupId    | 三方服务proto group      | `Sting`,可选      | 三方服务， 依赖包 group Id                                              |
 | dependencies.artifact.artifactId | 三方服务proto artifactId | `Sting`,可选      | 三方服务， 依赖包 artifact Id                                           |
 | dependencies.artifact.version    | 三方服务proto 版本         | `Sting`,可选      | 三方服务， 依赖包 版本                                                    |
-| dependencies.module              | 三方服务proto 模块         | `Sting`,必须      | 三方服务，**如未设置**，和 `artifact.artifactId`保持一致                       |
+| dependencies.module              | 三方服务proto 模块         | `Sting`,必须      | 三方服务，模块名称，**如未设置**，和 `artifact.artifactId`保持一致                  |
 | dependencies.domain              | 三方服务proto 领域         | `Sting`,必须      | 三方服务， 领域                                                        |
 | dependencies.applied             | 三方服务proto 已引入否       | `boolean`,false | 是否已经引入， 如果已在 `gradle>dependencies`引入，不再插件引入lib                  |
 
