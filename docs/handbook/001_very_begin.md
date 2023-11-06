@@ -147,8 +147,8 @@ Proto OAS 协议扩展解析编译插件 + 模板代码生成。
 | verbose                         | 执行过程log打开      | `boolean`, false | 出问题打开，过程全log打开调试                                     |
 | generatedVersion                | 是否携带生成插件版本     | `boolean`, false | 生成代码 `@Generated` 说明是否携带插件版本                         |
 | generatedTime                   | 是否携带生成时间戳      | `boolean`, false | 生成代码 `@Generated` 说明是否携带生成时间戳                        |
-| itProtoVersion                  | 插件版本           | `String`         | wire 插件版本运行时依赖版本，非必要勿设置，Apihug整体包BOM发行，勿手动设置这个版本     |
-| generatorMainClass              | 本地插件入口Main     | `String`         | 如非扩展了插件，勿设置                                          |
+| pluginMainVersion               | 插件辅助版本         | `String`         | wire 插件版本运行时依赖版本，非必要勿设置，Apihug整体包BOM发行，勿手动设置这个版本     |
+| pluginMainClass                 | 插件辅助入口Main     | `String`         | 如非扩展了插件，勿设置                                          |
 | local                           | 本地插件           | `boolean`,false  | 依赖自己扩展插件，如不是，勿设置                                     |
 | protocVersion                   | protoc版本       | `String`         | Wire发行时候自带，可以自行定义(可能导致不兼容风险)                         |
 | grpcVersion                     | grpc版本         | `String`         | Wire发行时候自带，可以自行定义(可能导致不兼容风险)                         |
@@ -178,16 +178,16 @@ Proto OAS 协议扩展解析编译插件 + 模板代码生成。
 
 插件配置 `hopeStub`:
 
-| 名称                 | 说明                | 类型(默认)            | 备注                                               |
-|--------------------|-------------------|-------------------|--------------------------------------------------|
-| debug              | 插件调试              | `boolean`, false  | 配置检测完推出，不完成任何代码生成                                |
-| verbose            | 执行过程log打开         | `boolean`, false  | 出问题打开，过程全log打开调试                                 |
-| generatedVersion   | 是否携带生成插件版本        | `boolean`, false  | 生成代码 `@Generated` 说明是否携带插件版本                     |
-| generatedTime      | 是否携带生成时间戳         | `boolean`, false  | 生成代码 `@Generated` 说明是否携带生成时间戳                    |
-| itProtoVersion     | 插件版本              | `String`          | wire 插件版本运行时依赖版本，非必要勿设置，Apihug整体包BOM发行，勿手动设置这个版本 |
-| generatorMainClass | 本地插件入口Main        | `String`          | 如非扩展了插件，勿设置                                      |
-| enableFrontVue     | 是否生成Front vue 脚手架 | `boolean` , false | 实验阶段                                             |
-| adminStub          | 是否生成Admin管理代码     | `boolean`, false  | 未启用                                              |
+| 名称                | 说明                | 类型(默认)            | 备注                                               |
+|-------------------|-------------------|-------------------|--------------------------------------------------|
+| debug             | 插件调试              | `boolean`, false  | 配置检测完推出，不完成任何代码生成                                |
+| verbose           | 执行过程log打开         | `boolean`, false  | 出问题打开，过程全log打开调试                                 |
+| generatedVersion  | 是否携带生成插件版本        | `boolean`, false  | 生成代码 `@Generated` 说明是否携带插件版本                     |
+| generatedTime     | 是否携带生成时间戳         | `boolean`, false  | 生成代码 `@Generated` 说明是否携带生成时间戳                    |
+| pluginMainVersion | 插件辅助版本            | `String`          | wire 插件版本运行时依赖版本，非必要勿设置，Apihug整体包BOM发行，勿手动设置这个版本 |
+| pluginMainClass   | 插件辅助入口Main        | `String`          | 如非扩展了插件，勿设置                                      |
+| enableFrontVue    | 是否生成Front vue 脚手架 | `boolean` , false | 实验阶段                                             |
+| adminStub         | 是否生成Admin管理代码     | `boolean`, false  | 未启用                                              |
 
 项目配置元信息依赖 `resources\hope-stub.json`：
 
