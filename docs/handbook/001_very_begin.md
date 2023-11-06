@@ -15,7 +15,7 @@ Apihug 包含组件
 
 ## 快速跑个例子
 
-版本 [发行信息](../release/README.md)， 当前最新 `0.2.1-RELEASE`
+版本 [发行信息](../release/README.md)， 当前最新 `0.2.2-RELEASE`
 
 例子 [Hope Guide Git](https://github.com/apihug/hope-guides)
 
@@ -225,7 +225,7 @@ Proto OAS 协议扩展解析编译插件 + 模板代码生成。
 | it-common-spring* | 共享                 | 协议这部分的共享，和spring 相关部分，spring 核心依赖               |
 | it-proto-extend   | proto buffer 扩展    | 纯扩展，包括在: 文件/message/enum/Service/method等上面元信息扩展 |
 | it-plugin-wire    | wire gradle plugin | wire 这里gradle扩展， 辅助包，插件引入，最低化学习成本               |
-| it-plugin-wire    | stub gradle plugin | stub 应用端的代码生成， spring 框架融入                      |
+| it-plugin-stub    | stub gradle plugin | stub 应用端的代码生成， spring 框架融入                      |
 
 ## Intellj
 
