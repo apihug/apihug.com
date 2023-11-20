@@ -444,9 +444,9 @@ Authority 为标准 `Enum` 类型， 在 `Wire`项目的元信息中指定 [auth
 
 只包含基本的 OAS 说明：
 
-1. `openapi` OAS 兼容[版本](https://swagger.io/specification/#fixed-fields)
-2. `info` [Info Object](https://swagger.io/specification/#info-object)
-3. `tag` [Tag Object](https://swagger.io/specification/#tag-object)
+1. `openapi` OAS 兼容 [版本](https://swagger.io/specification/#fixed-fields)
+2. `info` OAS 基本 [Info](https://swagger.io/specification/#info-object)
+3. `tag` OAS 标签 [Tag](https://swagger.io/specification/#tag-object)
 
 ⚠️其他信息，请勿这里定义，定义也会被忽略！
 
