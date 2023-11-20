@@ -29,27 +29,27 @@ option java_multiple_files = true;
 option java_package = "com.test.google";
 
 message Model {
-int32 id = 1;
-int32 shopId = 2;
-optional string name = 3;
-optional int32 categoryId = 4;
-optional DecimalValue markPrice = 5;
-optional bool onShelf = 6;
-repeated ModelParameterValue parameter = 7;
+    int32 id = 1;
+    int32 shopId = 2;
+    optional string name = 3;
+    optional int32 categoryId = 4;
+    optional DecimalValue markPrice = 5;
+    optional bool onShelf = 6;
+    repeated ModelParameterValue parameter = 7;
 }
 
 message DecimalValue {
-uint32 scale = 1;
-uint32 precision = 2;
-bytes value = 3;
+    uint32 scale = 1;
+    uint32 precision = 2;
+    bytes value = 3;
 }
 
 message ModelParameterValue {
-optional int32 id = 1;
-optional int32 parameterId = 2;
-optional string parameterName = 3;
-optional string parameterValue =4;
-optional int32 modelId = 5;
+    optional int32 id = 1;
+    optional int32 parameterId = 2;
+    optional string parameterName = 3;
+    optional string parameterValue =4;
+    optional int32 modelId = 5;
 }
 
 ```
@@ -207,13 +207,27 @@ message Value {
 
 ```
 
+### Grpc
+
+[GRPC](https://grpc.io/), A high performance, open source universal RPC framework, grpc 提供了整套的RPC 从客户端到服务器端，调用， 序列化、反序列化的方式。
+
+在 `hope` 体系中我们只使用了他的接口定义功能(IDL)， 未使用其作为 RPC 框架核心部分:
+
+![grpc arch](../public/image/protobuf/grpc-basic.svg)
+
+借助 protobuf 很好的元信息(option) 扩展功能，实现了 protobuf 上扩展 DSL来描述 [The OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification)。
+
+具体设计细节参考 [Protobuf DSL 实现 OAS](./003_protobuf_and_dsl_basic.md)
+
 ## 参考
 
 1. [protobuf](https://protobuf.dev/)
 2. [protobuf Git](https://github.com/protocolbuffers/protobuf)
 3. [protobuf gradle plugin](https://github.com/google/protobuf-gradle-plugin)
 4. [protobuf intellj plugin](https://plugins.jetbrains.com/plugin/14004-protocol-buffers)
-5. [API的设计 - 知乎 - 玩家翁伟​​](https://zhuanlan.zhihu.com/p/43809461) 一些思路， 这里设计完看到的，比较接近
-6. [深入浅出：如何正确使用 protobuf](https://zhuanlan.zhihu.com/p/406832315)
-7. [WSDL -WSDL is an XML notation for describing a web service](https://www.w3.org/TR/wsdl/)
-8. [Thrift IDL](https://thrift.apache.org/docs/idl)
+5. [GRPC](https://grpc.io/), A high performance, open source universal RPC framework
+6. [GRPC Github](https://github.com/grpc/grpc)
+7. [API的设计 - 知乎 - 玩家翁伟​​](https://zhuanlan.zhihu.com/p/43809461) 一些思路， 这里设计完看到的，比较接近
+8. [深入浅出：如何正确使用 protobuf](https://zhuanlan.zhihu.com/p/406832315)
+9. [WSDL -WSDL is an XML notation for describing a web service](https://www.w3.org/TR/wsdl/)
+10. [Thrift IDL](https://thrift.apache.org/docs/idl)
