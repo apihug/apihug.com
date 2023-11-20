@@ -182,21 +182,116 @@ extend google.protobuf.FieldOptions {
 }
 ```
 
-扩展字段枚举：
+扩展字段：
 
 | 字段 | 类型 | 说明 |
 | --- | --- | --- |
+|description|`string` | 描述 |
+|default| `string` | 默认值 |
+|example| `string`| 示例 |
+|multiple_of| `google.protobuf.DoubleValue` | 倍数 |
+|maximum| `google.protobuf.DoubleValue`| 最大值 |
+|exclusive_maximum| `google.protobuf.BoolValue`|区间是否包含最大值 |
+|minimum| `google.protobuf.DoubleValue`| 最小值|
+|exclusive_minimum| `google.protobuf.BoolValue`|区间是否包含最小值 |
+|max_length| `google.protobuf.UInt64Value` | 最大长度，string类型|
+|min_length| `google.protobuf.UInt64Value`| 最小长度，string类型|
+|pattern| string | 正值表达式验证 |
+|max_items| `google.protobuf.UInt64Value`| `repeated` 集合类型字段，最多元素数目|
+|min_items| `google.protobuf.UInt64Value`| `repeated` 集合类型字段，最多元素数目|
+|unique_items| `google.protobuf.BoolValue`| `repeated` 集合类型字段，元素是否唯一，`List vs Set`|
+|type| `JSONSchemaTypeHint`|✋, [参考下面说明](#jsonschematypehint) |
+|field_configuration| `FieldConfiguration`|✋, [参考下面说明](#jsonschematypehint) |
+|format| `string` | [OAS-Data Types](https://swagger.io/specification/#data-types) |
+|empty| `google.protobuf.BoolValue`| 是否可以为空-校验|
+|mock| `Mock`| Mock规则-TBD |
 |assert| validation 扩展| `javax.validation.constraints.AssertTrue\AssertFalse`|
 |decimal_max|validation 扩展|`javax.validation.constraints.DecimalMax(value = "0.0", inclusive = false)`|
 |decimal_min|validation 扩展|`javax.validation.constraints.DecimalMin(value = "0.0", inclusive = false)`|
 |digits_integer|validation 扩展|`javax.validation.constraints.Digits(integer=3, fraction=2)`|
 |digits_fraction|validation 扩展|`javax.validation.constraints.Digits(integer=3, fraction=2)`|
 |email|validation 扩展|`javax.validation.constraints.Email`|
-|time_constraint_type|validation 扩展|枚举参考下面 [TimeConstraintType](#oas-schema-tct)|
-|date_format|日期format| 日期枚举类型参考下面 [DateFormat](#oas-schema-dt)|
+|time_constraint_type|validation 扩展|枚举参考下面 [TimeConstraintType](#timeconstrainttype)|
+|date_format|日期format| 日期枚举类型参考下面 [DateFormat](#dateformat-枚举类型)|
 |customized_date_format|定制日期类型|符合标准日期定义规范(未强校验)|
+|read_only| `bool`| 未用 🚧|
+|extensions| `map<string, google.protobuf.Value>`| 未用 🚧|
+|enum| `repeated string`| 未用 🚧|
+|required| `repeated string` | 未用 🚧， 范围选择，通过枚举对象实现|
+|array| `repeated string`| 未用 🚧， 列表元素可选范围，通过枚举对象实现|
+|ref| `string` |外部对象引用，全路径, 未用 🚧 |
+|title|`string` |标题, 字段名称替代，未用 🚧|
+|max_properties| `google.protobuf.UInt64Value`|未用 🚧 |
+|min_properties| `google.protobuf.UInt64Value`|未用 🚧 |
+
+⚠️ 由于框架层引入常量设计机制， 所以很多需要通过 `enum`, `required`, `array` 设定枚举类型选型，都可替代。
+
+#### JSONSchemaTypeHint
+
+> Type `hint` of this schema, this used major on the parameter type define when primitive type can not support
+> Use it carefully, prefer to define a individual message type to support complex parameter type
+
+一般 Message 字段定义已经包含 `显式` 类型定义： 内置类型或者引用类型， 但是在 `option` 里的定义无法设定，比如在[Parameter 参数对象](#parameter-参数对象)。
+
+所以需要这里 `隐式` 的制定类型， 或者需要强制将内置类型对象转换成语言特定对象， 比如 `string` `隐式` 成一个 `DateTime`， 方便代码生成器推导宿主语言对象。
+
+| 字段 | 类型 | 说明 |
+| --- | --- | --- |
+|BOOLEAN|bool|类型boolean|
+|INTEGER|integer|整型|
+|DOUBLE|数字|double|
+|STRING|string|字符串|
+|FLOAT|float|浮点类型|
+|BIG_DECIMAL|bigDecimal|精度数字|
+|LONG|long|长整型|
+|DATE|date|日期|
+|DATE_TIME|dateTime|日期时间|
+|TIME|time|时间|
+|UUID|uuid|UUID 对象|
+|PASSWORD|password|密码对象|
+
+#### TimeConstraintType
+
+| 字段 | 类型 | 说明 |
+| --- | --- | --- |
+|FUTURE|时间校验|`@javax.validation.constraints.Future`|
+|FUTURE_OR_PRESENT|时间校验|`@javax.validation.constraints.FutureOrPresent`|
+|PAST|时间校验|`@javax.validation.constraints.Past`|
+|PAST_OR_PRESENT|时间校验|`@javax.validation.constraints.PastOrPresent`|
+
+#### DateFormat 枚举类型
+
+预定义formatter [java.time.format.DateTimeFormatter](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html)
+
+或自定义  `customized_date_format`, 最好用预定义的， 通过了校验测试。
+
+如果使用 `customized_date_format` 推导宿主语言类型有不确定性⚠️， 而预定义可以分化： `DateTime`, `Time`, `Date` 更细的分类 ⭐⭐⭐。
+
+| 字段 | 类型 | 说明 |
+| --- | --- | --- |
+|BASIC_ISO_DATE|yyyyMMdd|比如 `20111203` 类型 `LocalDate`|
+|ISO_LOCAL_DATE|yyyy-MM-dd|比如 `2011-12-03` 类型 `LocalDate`|
+|ISO_OFFSET_DATE|yyyy-MM-dd Z|比如 `2011-12-03+01:00` 类型 `LocalDate`|
+|ISO_LOCAL_TIME|HH:mm:ss|比如 `10:15:30` 类型 `LocalTime`|
+|ISO_OFFSET_TIME|HH:mm:ss Z|比如 `10:15:30+01:00` 类型 `LocalTime`|
+|ISO_LOCAL_DATE_TIME|yyyy-MM-dd T HH:mm:ss|比如 `2011-12-03T10:15:30` 类型 `LocalDateTime`|
+|ISO_OFFSET_DATE_TIME|yyyy-MM-dd T hh:mm:ss Z| 比如 `2011-12-03T10:15:30+01:00` 类型 `LocalDateTime`|
+|ISO_ZONED_DATE_TIME|2011-12-03T10:15:30+01:00[Europe/Paris]| 类型 `LocalDateTime` |
+|ISO_DATE_TIME|2011-12-03T10:15:30+01:00[Europe/Paris]| 类型 `LocalDateTime` |
+|ISO_ORDINAL_DATE|2012-337|年+第几日 类型 `LocalDate`|
+|ISO_WEEK_DATE|2012-W48-6|年+周+天 类型 `LocalDate`|
+|ISO_INSTANT|2011-12-03T10:15:30Z| 日期 和 instant 类型 `LocalDateTime`|
+|RFC_1123_DATE_TIME|RFC 1123 / RFC 822|'Tue, 3 Jun 2008 11:05:30 GMT' 类型 `LocalDateTime`|
+|YYYY_MM_DD_HH_MM_SS|yyyy-MM-dd HH:mm:ss|类型 `LocalDateTime`|
+|YYYY_MM_DD_HH_MM_SS_SSS|yyyy-MM-dd HH:mm:ss:SSS|类型 `LocalDateTime`|
+|SLASH_YYYY_MM_DD|yyyy/MM/dd|类型 `LocalDate`|
+|SLASH_YYYY_MM_DD_HH_MM_SS|yyyy/MM/dd HH:mm:ss|类型 `LocalDateTime`|
+|SLASH_YYYY_MM_DD_HH_MM_SS_SSS|yyyy/MM/dd HH:mm:ss:SSS|类型 `LocalDateTime`|
+|HH_MM|HH:mm|类型 `LocalTime`|
 
 ### Enum
+
+
 
 `hope.swagger.enm` 为 `EnumOptions` 用来描述`常量`对象：
 
