@@ -449,6 +449,31 @@ Authority 为标准 `Enum` 类型， 在 `Wire`项目的元信息中指定 [auth
 
 ⚠️其他信息，请勿这里定义，定义也会被忽略！
 
+## 文件上传
+
+协议定义：
+
+1. POST
+2. consumes 必须是 `multipart/form-data`
+
+```proto
+  option (hope.swagger.operation) = {
+    post: "/upload-meta";
+    consumes: "multipart/form-data";
+  };
+```
+
+字段定义 `format: "binary"`:
+
+```proto
+  // Binary format meaning a file.
+  string file = 5 [(hope.swagger.field) = {
+    format: "binary"
+  }];
+```
+
+多文件， 批量传输， TBD test  `repeat string files`
+
 ## Refer
 
 1. [The OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification)
