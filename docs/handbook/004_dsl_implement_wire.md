@@ -201,7 +201,7 @@ extend google.protobuf.FieldOptions {
 |min_items| `google.protobuf.UInt64Value`| `repeated` 集合类型字段，最多元素数目|
 |unique_items| `google.protobuf.BoolValue`| `repeated` 集合类型字段，元素是否唯一，`List vs Set`|
 |type| `JSONSchemaTypeHint`|✋, [参考下面说明](#jsonschematypehint) |
-|field_configuration| `FieldConfiguration`|✋, [参考下面说明](#jsonschematypehint) |
+|field_configuration| `FieldConfiguration`|✋, [参考下面说明](#fieldconfiguration) |
 |format| `string` | [OAS-Data Types](https://swagger.io/specification/#data-types) |
 |empty| `google.protobuf.BoolValue`| 是否可以为空-校验|
 |mock| `Mock`| Mock规则-TBD |
@@ -226,6 +226,23 @@ extend google.protobuf.FieldOptions {
 
 ⚠️ 由于框架层引入常量设计机制， 所以很多需要通过 `enum`, `required`, `array` 设定枚举类型选型，都可替代。
 
+#### FieldConfiguration
+
+```proto
+message FieldConfiguration {
+        string path_param_name = 47;
+}
+```
+
+在[Parameter 参数对象](#parameter-参数对象) 中定义灵活对象时， 在路径参数上对象和宿主语言命名有时候有冲突；
+比如 参数 `{user-id}` 在java 中无法使用 `user-id` 命名参数， 中划线 `-` 为字段命名非法字符，如果不设定，会`隐式`的转换成 `userId`, 但是同时也可以自己定义：
+
+```proto
+field_configuration: {
+    path_param_name: "orderIdAnother"
+}
+```
+
 #### JSONSchemaTypeHint
 
 > Type `hint` of this schema, this used major on the parameter type define when primitive type can not support
@@ -233,7 +250,7 @@ extend google.protobuf.FieldOptions {
 
 一般 Message 字段定义已经包含 `显式` 类型定义： 内置类型或者引用类型， 但是在 `option` 里的定义无法设定，比如在[Parameter 参数对象](#parameter-参数对象)。
 
-所以需要这里 `隐式` 的制定类型， 或者需要强制将内置类型对象转换成语言特定对象， 比如 `string` `隐式` 成一个 `DateTime`， 方便代码生成器推导宿主语言对象。
+所以需要这里 `隐式` 的制定类型， 或者需要强制将内置类型对象转换成语言特定对象， 比如 `string` `隐式` 成一个 `DateTime`， 方便代码生成器推导宿主语言对象类型。
 
 | 字段 | 类型 | 说明 |
 | --- | --- | --- |
@@ -291,7 +308,9 @@ extend google.protobuf.FieldOptions {
 
 ### Enum
 
+在 `Hope` 框架里，引入了 枚举常量的设计， 大大减少了常量的硬编码， `Enum` 在基本的宿主语言 `Java`, `c`, `Go` 等都有完整的支持。 
 
+在 `Enum` 上又扩展了 错误码 `Error` + `Authority` 常量扩展。
 
 `hope.swagger.enm` 为 `EnumOptions` 用来描述`常量`对象：
 
