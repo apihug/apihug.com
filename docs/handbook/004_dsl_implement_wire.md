@@ -196,7 +196,7 @@ extend google.protobuf.FieldOptions {
 |exclusive_minimum| `google.protobuf.BoolValue`|区间是否包含最小值 |
 |max_length| `google.protobuf.UInt64Value` | 最大长度，string类型|
 |min_length| `google.protobuf.UInt64Value`| 最小长度，string类型|
-|pattern| string | 正值表达式验证 |
+|pattern| `string` | 正值表达式验证 |
 |max_items| `google.protobuf.UInt64Value`| `repeated` 集合类型字段，最多元素数目|
 |min_items| `google.protobuf.UInt64Value`| `repeated` 集合类型字段，最多元素数目|
 |unique_items| `google.protobuf.BoolValue`| `repeated` 集合类型字段，元素是否唯一，`List vs Set`|
@@ -205,15 +205,15 @@ extend google.protobuf.FieldOptions {
 |format| `string` | [OAS-Data Types](https://swagger.io/specification/#data-types) |
 |empty| `google.protobuf.BoolValue`| 是否可以为空-校验|
 |mock| `Mock`| Mock规则-TBD |
-|assert| validation 扩展| `javax.validation.constraints.AssertTrue\AssertFalse`|
-|decimal_max|validation 扩展|`javax.validation.constraints.DecimalMax(value = "0.0", inclusive = false)`|
-|decimal_min|validation 扩展|`javax.validation.constraints.DecimalMin(value = "0.0", inclusive = false)`|
-|digits_integer|validation 扩展|`javax.validation.constraints.Digits(integer=3, fraction=2)`|
-|digits_fraction|validation 扩展|`javax.validation.constraints.Digits(integer=3, fraction=2)`|
-|email|validation 扩展|`javax.validation.constraints.Email`|
-|time_constraint_type|validation 扩展|枚举参考下面 [TimeConstraintType](#timeconstrainttype)|
-|date_format|日期format| 日期枚举类型参考下面 [DateFormat](#dateformat-枚举类型)|
-|customized_date_format|定制日期类型|符合标准日期定义规范(未强校验)|
+|assert| `google.protobuf.BoolValue`|validation 扩展: `javax.validation.constraints.AssertTrue\AssertFalse`|
+|decimal_max|`string`|validation 扩展:`javax.validation.constraints.DecimalMax(value = "0.0", inclusive = false)`|
+|decimal_min|`string`|validation 扩展:`javax.validation.constraints.DecimalMin(value = "0.0", inclusive = false)`|
+|digits_integer|`google.protobuf.Int32Value`|validation 扩展:`javax.validation.constraints.Digits(integer=3, fraction=2)`|
+|digits_fraction|`google.protobuf.Int32Value`|validation 扩展:`javax.validation.constraints.Digits(integer=3, fraction=2)`|
+|email|`google.protobuf.BoolValue`|validation 扩展:`javax.validation.constraints.Email`|
+|time_constraint_type|`TimeConstraintType`|validation 扩展:枚举参考下面 [TimeConstraintType](#timeconstrainttype)|
+|date_format|`DateFormat`|日期format: 日期枚举类型参考下面 [DateFormat](#dateformat-枚举类型)|
+|customized_date_format|`string`|定制日期类型:符合标准日期定义规范(未强校验)|
 |read_only| `bool`| 未用 🚧|
 |extensions| `map<string, google.protobuf.Value>`| 未用 🚧|
 |enum| `repeated string`| 未用 🚧|
