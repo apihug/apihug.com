@@ -182,6 +182,8 @@ extend google.protobuf.FieldOptions {
 }
 ```
 
+扩展字段枚举：
+
 | 字段 | 类型 | 说明 |
 | --- | --- | --- |
 |assert| validation 扩展| `javax.validation.constraints.AssertTrue\AssertFalse`|
