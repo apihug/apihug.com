@@ -17,11 +17,13 @@ Apihug 包含组件
 
 版本 [发行信息](../release/README.md)， 当前最新 `0.2.6-RELEASE` (未到1.0.0前，版本升级比较快，注意通知)
 
-💝 [版本检查](https://central.sonatype.com/search?q=com.apihug)， 注意， apihug 采用整包发行， plugin + 基础包永远公用一个版本。
+💝 [最新版本查询](https://central.sonatype.com/search?q=com.apihug)， 注意， apihug 采用整包发行， plugin + 基础包公用一个版本。
 
-所以建议采用 [gradle catalog](https://docs.gradle.org/current/userguide/platforms.html) + BOM 方式统一控制版本，以防止版本的冲突！
+建议采用 [gradle catalog](https://docs.gradle.org/current/userguide/platforms.html) + BOM 方式统一控制版本，以防版本冲突！
 
 例子 [Hope Guide Git](https://github.com/apihug/hope-guides)
+
+项目模板 + Intellj 项目入口， 设计进行中 🚧
 
 ### gradle 配置
 

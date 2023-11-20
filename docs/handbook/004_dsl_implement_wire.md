@@ -384,7 +384,7 @@ Authority 为标准 `Enum` 类型， 在 `Wire`项目的元信息中指定 [auth
 
 ## Meta
 
-项目配置元信息 `resources\hope-wire.json`：
+项目基本元信息 `resources\hope-wire.json`：
 
 ```json
 {
@@ -439,8 +439,7 @@ Authority 为标准 `Enum` 类型， 在 `Wire`项目的元信息中指定 [auth
 | authority.enumClass      | 验权，权限类型枚举 | `Sting`,可选 | 验权设计，权限枚举类，必须在 proto 有定义，编译时校验                                 |
 | authority.codePrefix     | 验权，权限标识段  | `Long`,可选  | 验权设计，多模块下，权限标识代码分段，避免重复，比如100000 为`user`权限区间段,100001为第一个       |
 
-
-### OAS info
+### OAS
 
 只包含基本的 OAS 说明：
 
