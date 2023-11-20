@@ -53,7 +53,7 @@ extend google.protobuf.MethodOptions {
 | 字段 | 类型 | 说明 |
 | --- | --- | --- |
 |request_name|输入参数命名|单 input 对象在函数中的命名，如果有parameter说明这个不需要，否则会自动推算 `_0(1,2,3)` 这样子比较丑，帮助代码生成器用|
-|priority|Priority 枚举| devops 流程控制，[参考](#oas-hope-priority)|
+|priority|Priority 枚举| devops 流程控制，[参考](#priority-枚举类型)|
 |pageable|是否支持pageable|入参有PageRequest, 结果自动分页包装 [参考](#oas-hope-page)|
 |raw|是否原始值|如非原始包装，会统一Result 风格封装|
 |request|是否带原始的request|比如servlet 协议手动处理|
@@ -61,10 +61,10 @@ extend google.protobuf.MethodOptions {
 |session|是否带session|视具体框架实现|
 |input_plural  |输入是数组|输入对象数组包装 List, 避免proto 对象定义爆炸|
 |out_plural|输出是数组|输出对象数组包装 List， 避免proto 对象定义爆炸|
-|pattern|get/put/post/delete/path| 目前只支持者几个对象 oneof， http action 语义|
-|parameters|参数对象| 是一个 [Parameter](##oas-hope-pas) 数组对象|
+|pattern|get/put/post/delete/patch| 目前只支持者几个对象 oneof， http action 语义|
+|parameters|参数对象| 是一个 [Parameter](parameter-参数对象) 数组对象|
 
-#### Priority 枚举类型 {#oas-hope-priority}
+#### Priority 枚举类型
 
 开发流程审批规范：
 
@@ -76,9 +76,9 @@ extend google.protobuf.MethodOptions {
 |CRITICAL|重要度很高|总监审批|
 |FATAL|重要度致命|CTO审批|
 
-#### Parameter 参数对象 {#oas-hope-pas}
+#### Parameter 参数对象
 
-⚠️  `0.2.5-RELEASE` 以后版本： 如果是 `GET` 类型
+⚠️  `0.2.6-RELEASE` 以后版本： 如果是 `GET` 类型
 
 1. 禁止 input type 定义非引用对象， 复杂对象一律通过引用对象定义
 2. 预定义对象(number/string/date 等)可以通过 parameters 定义
@@ -95,15 +95,14 @@ all primitive types(int,long,date etc) please define in the [parameters] part, o
 
 ```
 
-因为在 input 定义， 然后又在 parameters 定义(没有语法错误)， 导致难判断， 到底用那个？ 
-
+因为在 input 定义， 然后又在 parameters 定义(没有语法错误)， 导致难判断， 到底用那个?
 
 在非 `post` 传递, 非 `body` 对象时候使用,
 
 1. RPC 定义 input 最好是个 `Empty`, 所有参数都在 `hope.swagger.operation#parameters` 中定义（⚠️最标准做法⚠️）
 2. 如果是 `Message` 这个 `Message` 也会被当做 `parameter` 而非  `RequestBody`!
 3. 可以承接多个对象， 
-   1. 可以是原始对象： int/string/date/uuid 等， 
+   1. 可以是原始对象： int/string/date/uuid 等，
    2. 或者是封装对象  `Message`, `Enum`
 
 ```js
@@ -122,6 +121,9 @@ rpc DeleteOrder (google.protobuf.Empty) returns (google.protobuf.StringValue) {
                         empty: {
                             value: false;
                         }
+                        field_configuration: {
+                            path_param_name: "orderId"
+                        }
                     }
                 }
             }
@@ -134,7 +136,7 @@ rpc DeleteOrder (google.protobuf.Empty) returns (google.protobuf.StringValue) {
 | --- | --- | --- |
 |name|参数名词|写标准点， 转换成方法字段会自动推理， 比如 `hello-world` --> `helloWorld`|
 |in|参数类型| 参考下面枚举|
-|scheme|JSONSchema|[JSONSchema](##oas-schema)|
+|scheme|JSONSchema|[JSONSchema](#jsonschema)|
 |plural|是否列表|boolean|
 
 #### `IN` 参数
@@ -159,12 +161,26 @@ rpc DeleteOrder (google.protobuf.Empty) returns (google.protobuf.StringValue) {
 extend google.protobuf.MessageOptions {
     Schema schema = 1042;
 }
+message QueryTenantRoleRequest {
+  option (hope.swagger.schema) = {
+    json_schema: {
+      description: "查询角色列表";
+    };
+  };
+}
 ```
 
+消息整体的描述， 侧重消息的基本描述 `description`, `example`, `discriminator`,`read_only`, `external_docs` 当前未做解析 ⚠️。
 
+### JSONSchema
 
-标准 Schema 实现， 包含扩展 `JSONSchema` 上面：
+字段描述 `hope.swagger.field` 为 `FieldOptions`， 扩展 `JSONSchema` 上面：
 
+```proto
+extend google.protobuf.FieldOptions {
+    JSONSchema field = 1042;
+}
+```
 
 | 字段 | 类型 | 说明 |
 | --- | --- | --- |
