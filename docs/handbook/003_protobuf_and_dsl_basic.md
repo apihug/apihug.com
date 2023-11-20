@@ -25,10 +25,11 @@ description: 使用 Proto Buffer 实现DSL, DSL 描述 OAS OpenAPI Specification
 
 ![](../public/image/protobuf/architecture_introduction_diagram.svg)
 
-以及整个 google 系 API的 protobuf 定义 [Goole Open API Protos](https://github.com/googleapis/googleapis/tree/master/google/api)
+以及整个 google 系 API的 protobuf 定义 [Google Open API Protos](https://github.com/googleapis/googleapis/tree/master/google/api)
 
 ## 参考
 
 1. [gRPC-Gateway](https://github.com/grpc-ecosystem/grpc-gateway) ，gRPC-Gateway is a plugin of protoc. It reads a gRPC service definition and generates a reverse-proxy server which translates a RESTful JSON API into gRPC. 
-2. [Goole Open API Protos](https://github.com/googleapis/googleapis/tree/master/google/api) ； public Google APIs that support both REST and gRPC protocols. 
+2. [Google Open API Protos](https://github.com/googleapis/googleapis/tree/master/google/api) ； public Google APIs that support both REST and gRPC protocols. 
 3. [The OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification)
+4. [Jetbrains Domain-Specific Languages](https://www.jetbrains.com/mps/concepts/domain-specific-languages/)
