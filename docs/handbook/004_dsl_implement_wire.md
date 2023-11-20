@@ -288,23 +288,26 @@ field_configuration: {
 | --- | --- | --- |
 |BASIC_ISO_DATE|yyyyMMdd|比如 `20111203` 类型 `LocalDate`|
 |ISO_LOCAL_DATE|yyyy-MM-dd|比如 `2011-12-03` 类型 `LocalDate`|
-|ISO_OFFSET_DATE|yyyy-MM-dd Z|比如 `2011-12-03+01:00` 类型 `LocalDate`|
 |ISO_LOCAL_TIME|HH:mm:ss|比如 `10:15:30` 类型 `LocalTime`|
-|ISO_OFFSET_TIME|HH:mm:ss Z|比如 `10:15:30+01:00` 类型 `LocalTime`|
 |ISO_LOCAL_DATE_TIME|yyyy-MM-dd T HH:mm:ss|比如 `2011-12-03T10:15:30` 类型 `LocalDateTime`|
-|ISO_OFFSET_DATE_TIME|yyyy-MM-dd T hh:mm:ss Z| 比如 `2011-12-03T10:15:30+01:00` 类型 `LocalDateTime`|
-|ISO_ZONED_DATE_TIME|2011-12-03T10:15:30+01:00[Europe/Paris]| 类型 `LocalDateTime` |
-|ISO_DATE_TIME|2011-12-03T10:15:30+01:00[Europe/Paris]| 类型 `LocalDateTime` |
-|ISO_ORDINAL_DATE|2012-337|年+第几日 类型 `LocalDate`|
-|ISO_WEEK_DATE|2012-W48-6|年+周+天 类型 `LocalDate`|
-|ISO_INSTANT|2011-12-03T10:15:30Z| 日期 和 instant 类型 `LocalDateTime`|
-|RFC_1123_DATE_TIME|RFC 1123 / RFC 822|'Tue, 3 Jun 2008 11:05:30 GMT' 类型 `LocalDateTime`|
 |YYYY_MM_DD_HH_MM_SS|yyyy-MM-dd HH:mm:ss|类型 `LocalDateTime`|
 |YYYY_MM_DD_HH_MM_SS_SSS|yyyy-MM-dd HH:mm:ss:SSS|类型 `LocalDateTime`|
 |SLASH_YYYY_MM_DD|yyyy/MM/dd|类型 `LocalDate`|
 |SLASH_YYYY_MM_DD_HH_MM_SS|yyyy/MM/dd HH:mm:ss|类型 `LocalDateTime`|
 |SLASH_YYYY_MM_DD_HH_MM_SS_SSS|yyyy/MM/dd HH:mm:ss:SSS|类型 `LocalDateTime`|
 |HH_MM|HH:mm|类型 `LocalTime`|
+
+自定义格式日期时间判断方式：
+
+1. Date 判断包含任何一个：
+   1. yyyy
+   2. MM
+   3. dd
+2. Time 判断包含任何一个：
+   1. HH
+   2. mm
+   3. ss
+   4. SSS
 
 ### Enum
 
@@ -426,18 +429,18 @@ Authority 为标准 `Enum` 类型， 在 `Wire`项目的元信息中指定 [auth
 }
 ```
 
-| 名称                       | 说明        | 类型(默认)     | 备注                                                             |
+| 名称                       | 说明        | 类型|(默认)     | 备注                                                             |
 |--------------------------|-----------|------------|----------------------------------------------------------------|
-| packageName              | 包名        | `Sting`,必须 | 项目包名，符合java包命名规范，不可包含预留： `wire`, `stub` 关键字                    |
-| name                     | 项目名称      | `Sting`,必须 | 项目标识，符合 artifact ID, 小写，中文标识，proto后缀比如: user-info-proto        |
-| application              | 应用项目      | `Sting`,必须 | 和proto配套项目名称， 一般是name 去掉 proto 后缀比如： user-info                 |
-| module                   | 模块名称      | `Sting`,必须 | 用在运行时 service locator定位， 如无设置 `name`替代， domain+module需要保证运行时唯一 |
-| domain                   | 领域名        | `Sting`,必须 | 属于领域                                                           |
-| description              | 描述        | `Sting`,可选 | 描述                                                             |
-| persistence.identifyType | 数据库，账号类型  | `Sting`,可选 | 数据设计，有账号ID标识时启用, STRING\|INTEGER\|LONG                         |
-| persistence.tenantType   | 数据库，租户类型  | `Sting`,可选 | 数据设计，有多租户标识时启用, STRING\|INTEGER\|LONG                          |
-| authority.enumClass      | 验权，权限类型枚举 | `Sting`,可选 | 验权设计，权限枚举类，必须在 proto 有定义，编译时校验                                 |
-| authority.codePrefix     | 验权，权限标识段  | `Long`,可选  | 验权设计，多模块下，权限标识代码分段，避免重复，比如100000 为`user`权限区间段,100001为第一个       |
+| packageName              | 包名        | `Sting`|必须 | 项目包名，符合java包命名规范，不可包含预留： `wire`, `stub` 关键字                    |
+| name                     | 项目名称      | `Sting`|必须 | 项目标识，符合 artifact ID, 小写，中文标识，proto后缀比如: user-info-proto        |
+| application              | 应用项目      | `Sting`|必须 | 和proto配套项目名称， 一般是name 去掉 proto 后缀比如： user-info                 |
+| module                   | 模块名称      | `Sting`|必须 | 用在运行时 service locator定位， 如无设置 `name`替代， domain+module需要保证运行时唯一 |
+| domain                   | 领域名        | `Sting`|必须 | 属于领域                                                           |
+| description              | 描述        | `Sting`|可选 | 描述                                                             |
+| persistence.identifyType | 数据库，账号类型  | `Sting`|可选 | 数据设计，有账号ID标识时启用, STRING\|INTEGER\|LONG                         |
+| persistence.tenantType   | 数据库，租户类型  | `Sting`|可选 | 数据设计，有多租户标识时启用, STRING\|INTEGER\|LONG                          |
+| authority.enumClass      | 验权，权限类型枚举 | `Sting`|可选 | 验权设计，权限枚举类，必须在 proto 有定义，编译时校验                                 |
+| authority.codePrefix     | 验权，权限标识段  | `Long`|可选  | 验权设计，多模块下，权限标识代码分段，避免重复，比如100000 为`user`权限区间段,100001为第一个       |
 
 ### OAS
 
@@ -470,11 +473,19 @@ Authority 为标准 `Enum` 类型， 在 `Wire`项目的元信息中指定 [auth
   string file = 5 [(hope.swagger.field) = {
     format: "binary"
   }];
+
+  repeat bytes files = 6;
 ```
 
-多文件， 批量传输， TBD test  `repeat string files`
+支持单文件， 多文件批量上传；
+
+1. `format: "binary"` 自身类型 `string` 将被忽略；
+2. `bytes` 类型，自动被识别为  `binary` 文件类型；
+3. 支持 `repeat` 多文件批量上传；
+4. 支持附带属性， `@ModelAttribute` 参考spring 表单上传文件设计。
 
 ## Refer
 
 1. [The OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification)
 2. [OpenAPI Specification](https://swagger.io/specification/)  Version 3.1.0 since 2023.
+3. [Spring file upload](https://www.baeldung.com/spring-file-upload)
