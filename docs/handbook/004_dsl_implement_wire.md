@@ -482,7 +482,31 @@ Authority 为标准 `Enum` 类型， 在 `Wire`项目的元信息中指定 [auth
 1. `format: "binary"` 自身类型 `string` 将被忽略；
 2. `bytes` 类型，自动被识别为  `binary` 文件类型；
 3. 支持 `repeat` 多文件批量上传；
-4. 支持附带属性， `@ModelAttribute` 参考spring 表单上传文件设计。
+4. 支持附带属性。
+
+```proto
+message SampleUploadRequest {
+  option (hope.swagger.schema) = {
+    json_schema: {
+      description: "An example to upload a single file";
+    };
+  };
+
+  string name = 4 [(hope.swagger.field) = {
+    description: "new name of this upload file";
+    example: "just_another_file"
+    max_length: {
+      value: 64
+    }
+  }];
+
+
+  // Binary format meaning a file.
+  string an_file = 5 [(hope.swagger.field) = {
+    format: "binary"
+  }];
+}
+```
 
 ## Refer
 
