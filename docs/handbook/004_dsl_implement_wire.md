@@ -313,7 +313,7 @@ field_configuration: {
 
 `Hope` 框架里，引入了 枚举常量的设计， 大大减少了常量的硬编码， `Enum` 在宿主语言 `Java`, `c`, `Go` 等都有完整的支持。
 
-同时在 `Enum` 上又扩展了 错误码 `Error` + `Authority` 常量扩展。
+同时在 `Enum` 上又扩展了：错误码 `Error` + `Authority`类型。
 
 `hope.swagger.enm` 为 `EnumOptions` 用来描述`常量`对象：
 
