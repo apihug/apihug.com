@@ -39,8 +39,8 @@ pluginManagement {
         id 'com.google.protobuf' version "0.8.19"
 
         //for the local testing
-        id 'com.apihug.wire' version '0.2.2-RELEASE'
-        id 'com.apihug.stub' version '0.2.2-RELEASE'
+        id 'com.apihug.wire' version '0.2.6-RELEASE'
+        id 'com.apihug.stub' version '0.2.6-RELEASE'
 
     }
 }

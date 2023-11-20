@@ -118,7 +118,7 @@ rpc DeleteOrder (google.protobuf.Empty) returns (google.protobuf.StringValue) {
                     name: "order-id";
                     in: QUERY;
                     scheme: {
-                        type_hint: STRING;
+                        type: STRING;
                         empty: {
                             value: false;
                         }
