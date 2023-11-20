@@ -157,7 +157,7 @@ Proto OAS 协议扩展解析编译插件 + 模板代码生成。
 | validationVersion               | Validation版本   | `String`         | 未启用                                                  |
 | swaggerVersion                  | Swagger版本      | `String`         | 未启用                                                  |
 
-项目配置元信息依赖 `resources\hope-wire.json`：
+项目配置元信息 `resources\hope-wire.json`：
 
 | 名称                       | 说明        | 类型(默认)     | 备注                                                             |
 |--------------------------|-----------|------------|----------------------------------------------------------------|
@@ -165,8 +165,8 @@ Proto OAS 协议扩展解析编译插件 + 模板代码生成。
 | name                     | 项目名称      | `Sting`,必须 | 项目标识，符合 artifact ID, 小写，中文标识，proto后缀比如: user-info-proto        |
 | application              | 应用项目      | `Sting`,必须 | 和proto配套项目名称， 一般是name 去掉 proto 后缀比如： user-info                 |
 | module                   | 模块名称      | `Sting`,必须 | 用在运行时 service locator定位， 如无设置 `name`替代， domain+module需要保证运行时唯一 |
-| domain                   | 包名        | `Sting`,必须 | 属于领域                                                           |
-| description              | 包名        | `Sting`,可选 | 描述                                                             |
+| domain                   | 领域名        | `Sting`,必须 | 属于领域                                                           |
+| description              | 描述        | `Sting`,可选 | 描述                                                             |
 | persistence.identifyType | 数据库，账号类型  | `Sting`,可选 | 数据设计，有账号ID标识时启用, STRING\|INTEGER\|LONG                         |
 | persistence.tenantType   | 数据库，租户类型  | `Sting`,可选 | 数据设计，有多租户标识时启用, STRING\|INTEGER\|LONG                          |
 | authority.enumClass      | 验权，权限类型枚举 | `Sting`,可选 | 验权设计，权限枚举类，必须在 proto 有定义，编译时校验                                 |

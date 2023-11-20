@@ -308,9 +308,9 @@ field_configuration: {
 
 ### Enum
 
-在 `Hope` 框架里，引入了 枚举常量的设计， 大大减少了常量的硬编码， `Enum` 在基本的宿主语言 `Java`, `c`, `Go` 等都有完整的支持。 
+`Hope` 框架里，引入了 枚举常量的设计， 大大减少了常量的硬编码， `Enum` 在宿主语言 `Java`, `c`, `Go` 等都有完整的支持。
 
-在 `Enum` 上又扩展了 错误码 `Error` + `Authority` 常量扩展。
+同时在 `Enum` 上又扩展了 错误码 `Error` + `Authority` 常量扩展。
 
 `hope.swagger.enm` 为 `EnumOptions` 用来描述`常量`对象：
 
@@ -326,13 +326,129 @@ extend google.protobuf.EnumOptions {
 extend google.protobuf.EnumValueOptions {
   Meta field = 37020;
 }
+message Meta {
+
+  int32 code = 1;
+  string message = 2;
+  string cn_message = 3;
+
+  Error error = 4;
+}
 ```
 
-#### Authority
+| 名词 | 用途 | 说明 |
+| --- | --- | --- |
+|code| 错误代码 | int |
+|message|错误信息| string|
+|cn_message|错误信息(中)| string|
 
 #### Error
 
+错误枚举，在枚举上扩展 `Error error = 4;` 字段包含;
+
+| 字段 | 类型 | 说明 |
+| --- | --- | --- |
+|title|`string`|简单标题|
+|tips|`string`|提示|
+|http_status|`HttpStatus`|Http 错误码|
+|phase|`Phase`|阶段,[参考下面文档](#错误阶段)|
+|severity|`Severity`|严重程度,[参考下面文档](#错误严重性)|
+
+##### 错误阶段
+
+| 字段 | 类型 | 说明 |
+| --- | --- | --- |
+|CONTROLLER|Controller|表单层|
+|SERVICE|Service|服务层|
+|DOMAIN|Domain|领域层|
+
+#### 错误严重性
+
+| 字段 | 类型 | 说明 |
+| --- | --- | --- |
+|LOW|低|低,无影响|
+|WARN|警告|警告,业务错误可重试|
+|ERROR|错误|错误,业务无法进行|
+|FATAL|灾难|灾难,数据破坏|
+
+#### Authority
+
+Authority 为标准 `Enum` 类型， 在 `Wire`项目的元信息中指定 [authority meta](./001_very_begin.md#wire-配置)：
+
+```json
+ "authority" : {
+    "enumClass" : "hope.we.proto.infra.enumeration.authority.SystemAuthorityEnum",
+    "codePrefix" : 11000000
+  }
+```
+
 ## Meta
+
+项目配置元信息 `resources\hope-wire.json`：
+
+```json
+{
+  "packageName": "hope.we",
+  "name": "bigger-project-proto",
+  "application": "bigger-project",
+  "domain": "hope",
+  "persistence" : {
+    "identifyType" : "LONG",
+    "tenantType" : "LONG"
+  },
+  "authority" : {
+    "enumClass" : "hope.we.proto.infra.enumeration.authority.SystemAuthorityEnum",
+    "codePrefix" : 11000000
+  },
+  "createdAt": "2023-01-01",
+  "createdBy" : "Aaron",
+  "api": {
+    "openapi" : "3.0.1",
+    "info" : {
+      "contact" : {
+        "name" : "developer@apihug.com",
+        "url" : "https://github.com/hope/apihug",
+        "email" : "developer@apihug.com"
+      }
+    },
+    "externalDocs" : {
+      "description" : "Hope is the best thing",
+      "url" : "https://github.com/hope/apihug/"
+    },
+    "tags" : [ {
+      "name" : "tenant",
+      "description" : "租户操作"
+    }, {
+      "name" : "platform",
+      "description" : "平台操作"
+    }]
+  }
+}
+```
+
+| 名称                       | 说明        | 类型(默认)     | 备注                                                             |
+|--------------------------|-----------|------------|----------------------------------------------------------------|
+| packageName              | 包名        | `Sting`,必须 | 项目包名，符合java包命名规范，不可包含预留： `wire`, `stub` 关键字                    |
+| name                     | 项目名称      | `Sting`,必须 | 项目标识，符合 artifact ID, 小写，中文标识，proto后缀比如: user-info-proto        |
+| application              | 应用项目      | `Sting`,必须 | 和proto配套项目名称， 一般是name 去掉 proto 后缀比如： user-info                 |
+| module                   | 模块名称      | `Sting`,必须 | 用在运行时 service locator定位， 如无设置 `name`替代， domain+module需要保证运行时唯一 |
+| domain                   | 领域名        | `Sting`,必须 | 属于领域                                                           |
+| description              | 描述        | `Sting`,可选 | 描述                                                             |
+| persistence.identifyType | 数据库，账号类型  | `Sting`,可选 | 数据设计，有账号ID标识时启用, STRING\|INTEGER\|LONG                         |
+| persistence.tenantType   | 数据库，租户类型  | `Sting`,可选 | 数据设计，有多租户标识时启用, STRING\|INTEGER\|LONG                          |
+| authority.enumClass      | 验权，权限类型枚举 | `Sting`,可选 | 验权设计，权限枚举类，必须在 proto 有定义，编译时校验                                 |
+| authority.codePrefix     | 验权，权限标识段  | `Long`,可选  | 验权设计，多模块下，权限标识代码分段，避免重复，比如100000 为`user`权限区间段,100001为第一个       |
+
+
+### OAS info
+
+只包含基本的 OAS 说明：
+
+1. `openapi` OAS 兼容[版本](https://swagger.io/specification/#fixed-fields)
+2. `info` [Info Object](https://swagger.io/specification/#info-object)
+3. `tag` [Tag Object](https://swagger.io/specification/#tag-object)
+
+⚠️其他信息，请勿这里定义，定义也会被忽略！
 
 ## Refer
 
