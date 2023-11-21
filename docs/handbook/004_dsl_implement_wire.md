@@ -215,16 +215,16 @@ extend google.protobuf.FieldOptions {
 |customized_date_format|`string`|定制日期类型:符合标准日期定义规范(未强校验)|
 |mock| `Mock`| Mock规则 🏗️ |
 |read_only| `bool`| 未用 🚧|
-|extensions| `map<string, google.protobuf.Value>`| 未用 🚧|
+|extensions| `map<string, google.protobuf.Value>`| 未用 🚧，扩展说明|
 |enum| `repeated string`| 未用 🚧|
 |required| `repeated string` | 未用 🚧， 范围选择，通过枚举对象实现|
 |array| `repeated string`| 未用 🚧， 列表元素可选范围，通过枚举对象实现|
-|ref| `string` |未用 🚧, 外部对象引用，需全路径指定 **在parameter设置时候有帮助，比如指定到 Enum 对象**|
+|ref| `string` |未用 🚧, 外部对象引用，需全路径指定 **parameter配置时，如引用 Enum 对象**|
 |title|`string` |未用 🚧, 标题, 字段名称替代|
-|max_properties| `google.protobuf.UInt64Value`|未用 🚧，Map元素最多key? |
-|min_properties| `google.protobuf.UInt64Value`|未用 🚧，Map元素最多key? |
+|~max_properties~| `google.protobuf.UInt64Value`|~未用 🚧，Map元素最多key?~ |
+|~min_properties~| `google.protobuf.UInt64Value`|~未用 🚧，Map元素最多key?~ |
 
-⚠️ 由于框架层引入常量设计机制， 所以很多需要通过 `enum`, `required`, `array` 设定枚举类型选型，都可替代。
+⚠️ 由于框架层引入常量设计机制， 所以很多需要通过 `enum`, `required`, `array` 控制的，通过枚举控制均都可弱化和替代掉。
 
 #### FieldConfiguration
 
