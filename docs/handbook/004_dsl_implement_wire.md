@@ -196,15 +196,14 @@ extend google.protobuf.FieldOptions {
 |exclusive_minimum| `google.protobuf.BoolValue`|区间是否包含最小值 |
 |max_length| `google.protobuf.UInt64Value` | 最大长度，string类型|
 |min_length| `google.protobuf.UInt64Value`| 最小长度，string类型|
-|pattern| `string` | 正值表达式验证 |
 |max_items| `google.protobuf.UInt64Value`| `repeated` 集合类型字段，最多元素数目|
 |min_items| `google.protobuf.UInt64Value`| `repeated` 集合类型字段，最多元素数目|
 |unique_items| `google.protobuf.BoolValue`| `repeated` 集合类型字段，元素是否唯一，`List vs Set`|
-|type| `JSONSchemaTypeHint`|✋, [参考下面说明](#jsonschematypehint) |
-|field_configuration| `FieldConfiguration`|✋, [参考下面说明](#fieldconfiguration) |
+|type| `JSONSchemaTypeHint`|✋ [参考](#jsonschematypehint) |
+|field_configuration| `FieldConfiguration`|✋ [参考](#fieldconfiguration) |
 |format| `string` | [OAS-Data Types](https://swagger.io/specification/#data-types) |
 |empty| `google.protobuf.BoolValue`| 是否可以为空-校验|
-|mock| `Mock`| Mock规则-TBD |
+|pattern| `string` | validation 扩展:正值表达式验证 `javax.validation.constraints.Pattern("^A-z$")` |
 |assert| `google.protobuf.BoolValue`|validation 扩展: `javax.validation.constraints.AssertTrue\AssertFalse`|
 |decimal_max|`string`|validation 扩展:`javax.validation.constraints.DecimalMax(value = "0.0", inclusive = false)`|
 |decimal_min|`string`|validation 扩展:`javax.validation.constraints.DecimalMin(value = "0.0", inclusive = false)`|
@@ -214,15 +213,16 @@ extend google.protobuf.FieldOptions {
 |time_constraint_type|`TimeConstraintType`|validation 扩展:枚举参考下面 [TimeConstraintType](#timeconstrainttype)|
 |date_format|`DateFormat`|日期format: 日期枚举类型参考下面 [DateFormat](#dateformat-枚举类型)|
 |customized_date_format|`string`|定制日期类型:符合标准日期定义规范(未强校验)|
+|mock| `Mock`| Mock规则 🏗️ |
 |read_only| `bool`| 未用 🚧|
 |extensions| `map<string, google.protobuf.Value>`| 未用 🚧|
 |enum| `repeated string`| 未用 🚧|
 |required| `repeated string` | 未用 🚧， 范围选择，通过枚举对象实现|
 |array| `repeated string`| 未用 🚧， 列表元素可选范围，通过枚举对象实现|
-|ref| `string` |外部对象引用，全路径, 未用 🚧 |
-|title|`string` |标题, 字段名称替代，未用 🚧|
-|max_properties| `google.protobuf.UInt64Value`|未用 🚧 |
-|min_properties| `google.protobuf.UInt64Value`|未用 🚧 |
+|ref| `string` |未用 🚧, 外部对象引用，需全路径指定 **在parameter设置时候有帮助，比如指定到 Enum 对象**|
+|title|`string` |未用 🚧, 标题, 字段名称替代|
+|max_properties| `google.protobuf.UInt64Value`|未用 🚧，Map元素最多key? |
+|min_properties| `google.protobuf.UInt64Value`|未用 🚧，Map元素最多key? |
 
 ⚠️ 由于框架层引入常量设计机制， 所以很多需要通过 `enum`, `required`, `array` 设定枚举类型选型，都可替代。
 
@@ -385,6 +385,14 @@ Authority 为标准 `Enum` 类型， 在 `Wire`项目的元信息中指定 [auth
   }
 ```
 
+#### Map
+
+对于Map类型字段，处理比较头疼， 如果混合宿主语言特征，会非常棘手， 比如 key, value 都有 `Generic` 特性。
+综合：**OAS** [Dictionaries, HashMaps and Associative Arrays](https://swagger.io/docs/specification/data-models/dictionaries/), Protobuf: [Maps Features](https://protobuf.dev/programming-guides/proto3/#maps-features) 如下约束：
+
+1. Key, Value 不能 `Generic` 也就是只能固定类型， 宿主语言内的变幻， 无法控制，比如子类判断。
+2. 参考 [Protobuf Map](./002_protobuf_basic.md#map) 将 key, value 转换成独立 `Message` 对象。
+
 ## Meta
 
 项目基本元信息 `resources\hope-wire.json`：
@@ -429,7 +437,7 @@ Authority 为标准 `Enum` 类型， 在 `Wire`项目的元信息中指定 [auth
 }
 ```
 
-| 名称                       | 说明        | 类型 |(默认)     | 备注                                                             |
+| 名称                       | 说明        | 类型 | 值(默认)     | 备注                                                             |
 |--------------------------|-----------|------------|------------|----------------------------------------------------------------|
 | packageName              | 包名        | `Sting`|必须 | 项目包名，符合java包命名规范，不可包含预留： `wire`, `stub` 关键字                    |
 | name                     | 项目名称      | `Sting`|必须 | 项目标识，符合 artifact ID, 小写，中文标识，proto后缀比如: user-info-proto        |
