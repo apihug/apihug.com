@@ -516,6 +516,48 @@ message SampleUploadRequest {
 }
 ```
 
+## Command
+
+配置 wire 项目模块 `build.gradle`：
+
+```goovy
+
+plugins {
+    id "java-library"
+    id "com.apihug.wire"
+}
+
+
+hopeWire {
+    verbose = true
+}
+```
+
+刷新本模块的 gradle 后， 在task 列表可以看到 `wire` 命令被添加进来， 运行此模块下的 wire 命令 `gradlew wire`
+
+1. `main\wire` 生成运行时代码
+2. `main\resources` 生成编译元信息
+
+| 名称                              | 说明             | 类型|(默认)           | 备注                                                   |
+|---------------------------------|----------------|------------------|------------|------------------------------------------------------|
+| disable                         | 插件调试           | `boolean`|false  | 依赖注入完成，不添加额外 Task，调试测试用                              |
+| smock                           | 插件调试           | `boolean`| false | 上面步骤完成 + Task 注入完毕， 不执行最后的生成动作，调试测试用                 |
+| debug                           | 插件调试           | `boolean`| false | 上面步骤完成 + 执行生成动作第一阶段准备， 不最终触发动作，调试测试用                 |
+| restrict                        | 非扩展类型是否隐式转换    | `boolean`| false | `google.protobuf.Timestamp` 定义是否支持默认转换到 local time   |
+| verbose                         | 执行过程log打开      | `boolean`| false | 出问题打开，过程全log打开调试                                     |
+| generatedVersion                | 是否携带生成插件版本     | `boolean`| false | 生成代码 `@Generated` 说明是否携带插件版本                         |
+| generatedTime                   | 是否携带生成时间戳      | `boolean`| false | 生成代码 `@Generated` 说明是否携带生成时间戳                        |
+| pluginMainVersion               | 插件辅助版本         | `String` |        | wire 插件版本运行时依赖版本，非必要勿设置，Apihug整体包BOM发行，勿手动设置这个版本     |
+| pluginMainClass                 | 插件辅助入口Main     | `String` |        | 如非扩展了插件，勿设置                                          |
+| local                           | 本地插件           | `boolean`|false  | 依赖自己扩展插件，如不是，勿设置                                     |
+| protocVersion                   | protoc版本       | `String`|         | Wire发行时候自带，可以自行定义(可能导致不兼容风险)                         |
+| grpcVersion                     | grpc版本         | `String`|         | Wire发行时候自带，可以自行定义(可能导致不兼容风险)                         |
+| keepProto                       | 是否包含proto原编译文件 | `boolean`|false  | wire项目发行时候是否携带protoc编译结果，除项目间有深度逻辑依赖，共享的应局限在POJO对象这层 |
+| wireProtoBufGradlePluginVersion | protobuf插件版本   | `String`|         | 未启用                                                  |
+| validationVersion               | Validation版本   | `String`|         | 未启用                                                  |
+| swaggerVersion                  | Swagger版本      | `String`|         | 未启用                                                  |
+
+
 ## Refer
 
 1. [The OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification)
