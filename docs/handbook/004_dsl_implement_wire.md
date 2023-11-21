@@ -462,10 +462,10 @@ Authority 为标准 `Enum` 类型， 在 `Wire`项目的元信息中指定 [auth
 
 ## 文件上传
 
-协议定义：
+协议定义✏️：
 
-1. POST
-2. consumes 必须是 `multipart/form-data`
+1. 方法：POST (必须)
+2. consumes 类型： `multipart/form-data` （必须）
 
 ```proto
   option (hope.swagger.operation) = {
