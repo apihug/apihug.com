@@ -17,7 +17,9 @@
 
 <h1 align="center"> 🤗 ApiHug × {Postman|Swagger|Apifox} <br/>= 快↑ 准√ 省↓</h1>
 
-当前版本： **0.2.3-RELEASE**  `@2023-11-06`
+当前版本： **0.2.7-RELEASE**  `@2023-11-21`
+
+💝 [最新版本查询](https://central.sonatype.com/search?q=com.apihug)， 注意， apihug 采用整包发行， plugin + 基础包公用一个版本。
 
 # 🖖 Intro
 
