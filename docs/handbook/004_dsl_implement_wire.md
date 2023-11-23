@@ -62,7 +62,7 @@ extend google.protobuf.MethodOptions {
 |input_plural  |输入是数组|输入对象数组包装 List, 避免proto 对象定义爆炸|
 |out_plural|输出是数组|输出对象数组包装 List， 避免proto 对象定义爆炸|
 |pattern|get/put/post/delete/patch| 目前只支持者几个对象 oneof， http action 语义|
-|parameters|参数对象| 是一个 [Parameter](parameter-参数对象) 数组对象|
+|parameters|参数对象| 是一个 [Parameter](#parameter-参数对象) 数组对象|
 
 #### Priority 枚举类型
 
