@@ -245,13 +245,9 @@ field_configuration: {
 
 #### JSONSchemaFormat
 
-为来避免复杂度， ~JSONSchemaTypeHint~ 自 **0.3.3.RELEASE** 被合并到 `format`
+为避免复杂度， ~JSONSchemaTypeHint~ 自 **0.3.3.RELEASE** 被合并到 `format`
 
-和 `format` 合并了[OpenApi format](https://spec.openapis.org/oas/latest.html#format)  (OpenAPI Specification v3.1.0)
-
-
-> Type `hint` of this schema, this used major on the parameter type define when primitive type can not support
-> Use it carefully, prefer to define a individual message type to support complex parameter type
+和 `format` 合并了[OpenApi format](https://spec.openapis.org/oas/latest.html#format)  (OpenAPI Specification v3.1.0,2023-12) + 部分自有扩展。
 
 一般 Message 字段定义已经包含 `显式` 类型定义： 内置类型或者引用类型， 但是在 `option` 里的定义无法设定，比如在[Parameter 参数对象](#parameter-参数对象)。
 
@@ -273,6 +269,9 @@ field_configuration: {
 |PASSWORD|password|密码对象|password|
 |EMAIL|email|邮箱对象|email|
 |BINARY|binary|文件对象|binary|
+
+⚠️ 谨慎使用，这也是为什么我们推崇，复杂对象通过 `Message` 定义， 避免这种 `Ad-hoc` Path/Query/Header `隐式`推断；
+固然通过强制 仅支持 `post`可以尽量避免， 但是 `ApiHug` 还是兼容了这些古老的做法。
 
 #### TimeConstraintType
 
