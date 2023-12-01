@@ -199,9 +199,9 @@ extend google.protobuf.FieldOptions {
 |max_items| `google.protobuf.UInt64Value`| `repeated` 集合类型字段，最多元素数目|
 |min_items| `google.protobuf.UInt64Value`| `repeated` 集合类型字段，最多元素数目|
 |unique_items| `google.protobuf.BoolValue`| `repeated` 集合类型字段，元素是否唯一，`List vs Set`|
-|type| `JSONSchemaTypeHint`|✋ [参考](#jsonschematypehint) |
+|~type~| ~`JSONSchemaTypeHint`~|😢|
+|format| `string` | [JSONSchemaFormat](#jsonschemaformat)|
 |field_configuration| `FieldConfiguration`|✋ [参考](#fieldconfiguration) |
-|format| `string` | [OAS-Data Types](https://swagger.io/specification/#data-types) |
 |empty| `google.protobuf.BoolValue`| 是否可以为空-校验|
 |pattern| `string` | validation 扩展:正值表达式验证 `javax.validation.constraints.Pattern("^A-z$")` |
 |assert| `google.protobuf.BoolValue`|validation 扩展: `javax.validation.constraints.AssertTrue\AssertFalse`|
@@ -243,7 +243,12 @@ field_configuration: {
 }
 ```
 
-#### JSONSchemaTypeHint
+#### JSONSchemaFormat
+
+为来避免复杂度， ~JSONSchemaTypeHint~ 自 **0.3.3.RELEASE** 被合并到 `format`
+
+和 `format` 合并了[OpenApi format](https://spec.openapis.org/oas/latest.html#format)  (OpenAPI Specification v3.1.0)
+
 
 > Type `hint` of this schema, this used major on the parameter type define when primitive type can not support
 > Use it carefully, prefer to define a individual message type to support complex parameter type
@@ -252,20 +257,22 @@ field_configuration: {
 
 所以需要这里 `隐式` 的制定类型， 或者需要强制将内置类型对象转换成语言特定对象， 比如 `string` `隐式` 成一个 `DateTime`， 方便代码生成器推导宿主语言对象类型。
 
-| 字段 | 类型 | 说明 |
-| --- | --- | --- |
-|BOOLEAN|bool|类型boolean|
-|INTEGER|integer|整型|
-|DOUBLE|数字|double|
-|STRING|string|字符串|
-|FLOAT|float|浮点类型|
-|BIG_DECIMAL|bigDecimal|精度数字|
-|LONG|long|长整型|
-|DATE|date|日期|
-|DATE_TIME|dateTime|日期时间|
-|TIME|time|时间|
-|UUID|uuid|UUID 对象|
-|PASSWORD|password|密码对象|
+| 字段 | 类型 | 说明 |OAS format|
+| --- | --- | --- | --- |
+|BOOLEAN|bool|类型boolean|bool|
+|INTEGER|integer|整型|int32|
+|DOUBLE|数字|double|double|
+|STRING|string|字符串|-|
+|FLOAT|float|浮点类型|float|
+|BIG_DECIMAL|bigDecimal|精度数字|big-decimal|
+|LONG|long|长整型|int64|
+|DATE|date|日期|date|
+|DATE_TIME|dateTime|日期时间|date-time|
+|TIME|time|时间|time|
+|UUID|uuid|UUID 对象|uuid|
+|PASSWORD|password|密码对象|password|
+|EMAIL|email|邮箱对象|email|
+|BINARY|binary|文件对象|binary|
 
 #### TimeConstraintType
 
