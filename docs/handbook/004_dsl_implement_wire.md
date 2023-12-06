@@ -31,11 +31,11 @@ message ServiceSchema {
 }
 ```
 
-| 名词 | 用途 | 说明 |
-| --- | --- | --- |
-|tag| 服务标签 | 对象Tag |
-|path| 服务基础前缀，默认`/` | string|
-|description| 服务描述| string|
+| 名词          | 用途           | 说明     |
+|-------------|--------------|--------|
+| tag         | 服务标签         | 对象Tag  |
+| path        | 服务基础前缀，默认`/` | string |
+| description | 服务描述         | string |
 
 
 ### Method
@@ -50,31 +50,31 @@ extend google.protobuf.MethodOptions {
 
 `MethodOptions`  operation 描述，  [Operation 对象](https://swagger.io/specification/#operation-object)
 
-| 字段 | 类型 | 说明 |
-| --- | --- | --- |
-|request_name|输入参数命名|单 input 对象在函数中的命名，如果有parameter说明这个不需要，否则会自动推算 `_0(1,2,3)` 这样子比较丑，帮助代码生成器用|
-|priority|Priority 枚举| devops 流程控制，[参考](#priority-枚举类型)|
-|pageable|是否支持pageable|入参有PageRequest, 结果自动分页包装 [参考](#oas-hope-page)|
-|raw|是否原始值|如非原始包装，会统一Result 风格封装|
-|request|是否带原始的request|比如servlet 协议手动处理|
-|response|是否带原始的response|比如servlet协议手动处理|
-|session|是否带session|视具体框架实现|
-|input_plural  |输入是数组|输入对象数组包装 List, 避免proto 对象定义爆炸|
-|out_plural|输出是数组|输出对象数组包装 List， 避免proto 对象定义爆炸|
-|pattern|get/put/post/delete/patch| 目前只支持者几个对象 oneof， http action 语义|
-|parameters|参数对象| 是一个 [Parameter](#parameter-参数对象) 数组对象|
+| 字段           | 类型                        | 说明                                                                        |
+|--------------|---------------------------|---------------------------------------------------------------------------|
+| request_name | 输入参数命名                    | 单 input 对象在函数中的命名，如果有parameter说明这个不需要，否则会自动推算 `_0(1,2,3)` 这样子比较丑，帮助代码生成器用 |
+| priority     | Priority 枚举               | devops 流程控制，[参考](#priority-枚举类型)                                          |
+| pageable     | 是否支持pageable              | 入参有PageRequest, 结果自动分页包装 [参考](#oas-hope-page)                             |
+| raw          | 是否原始值                     | 如非原始包装，会统一Result 风格封装                                                     |
+| request      | 是否带原始的request             | 比如servlet 协议手动处理                                                          |
+| response     | 是否带原始的response            | 比如servlet协议手动处理                                                           |
+| session      | 是否带session                | 视具体框架实现                                                                   |
+| input_plural | 输入是数组                     | 输入对象数组包装 List, 避免proto 对象定义爆炸                                             |
+| out_plural   | 输出是数组                     | 输出对象数组包装 List， 避免proto 对象定义爆炸                                             |
+| pattern      | get/put/post/delete/patch | 目前只支持者几个对象 oneof， http action 语义                                          |
+| parameters   | 参数对象                      | 是一个 [Parameter](#parameter-参数对象) 数组对象                                     |
 
 #### Priority 枚举类型
 
 开发流程审批规范：
 
-| 字段 | 类型 | 说明 |
-| --- | --- | --- |
-|LOW|重要度低|开发者交叉审批|
-|MIDDLE|重要度中等|开发组长审批|
-|HIGH|重要度高|项目管理者审批|
-|CRITICAL|重要度很高|总监审批|
-|FATAL|重要度致命|CTO审批|
+| 字段       | 类型    | 说明      |
+|----------|-------|---------|
+| LOW      | 重要度低  | 开发者交叉审批 |
+| MIDDLE   | 重要度中等 | 开发组长审批  |
+| HIGH     | 重要度高  | 项目管理者审批 |
+| CRITICAL | 重要度很高 | 总监审批    |
+| FATAL    | 重要度致命 | CTO审批   |
 
 #### Parameter 参数对象
 
@@ -132,24 +132,24 @@ rpc DeleteOrder (google.protobuf.Empty) returns (google.protobuf.StringValue) {
 };
 ```
 
-| 字段 | 类型 | 说明 |
-| --- | --- | --- |
-|name|参数名词|写标准点， 转换成方法字段会自动推理， 比如 `hello-world` --> `helloWorld`|
-|in|参数类型| 参考下面枚举|
-|scheme|JSONSchema|[JSONSchema](#jsonschema)|
-|plural|是否列表|boolean|
+| 字段     | 类型         | 说明                                                    |
+|--------|------------|-------------------------------------------------------|
+| name   | 参数名词       | 写标准点， 转换成方法字段会自动推理， 比如 `hello-world` --> `helloWorld` |
+| in     | 参数类型       | 参考下面枚举                                                |
+| scheme | JSONSchema | [JSONSchema](#jsonschema)                             |
+| plural | 是否列表       | boolean                                               |
 
 #### `IN` 参数
 
 类型  [OAS 参数对象](https://swagger.io/specification/#parameter-object)
 
-| 字段 | 类型 | 说明 |
-| --- | --- | --- |
-|QUERY|parameter|`path/arg1=123`, arg1 参数|
-|HEADER |HTTP 协议头|比如JWT, 或者扩展字段|
-|PATH|路径|`/path/{arg}/hello`, `arg` 记得必须是 `{}`, 目前没有强制校验|
-|COOKIE|来自cookie 参数|视底层框架|
-|SESSION|来自session 参数|视底层框架|
+| 字段      | 类型           | 说明                                              |
+|---------|--------------|-------------------------------------------------|
+| QUERY   | parameter    | `path/arg1=123`, arg1 参数                        |
+| HEADER  | HTTP 协议头     | 比如JWT, 或者扩展字段                                   |
+| PATH    | 路径           | `/path/{arg}/hello`, `arg` 记得必须是 `{}`, 目前没有强制校验 |
+| COOKIE  | 来自cookie 参数  | 视底层框架                                           |
+| SESSION | 来自session 参数 | 视底层框架                                           |
 
 ## Resource
 
@@ -184,45 +184,45 @@ extend google.protobuf.FieldOptions {
 
 扩展字段：
 
-| 字段 | 类型 | 说明 |
-| --- | --- | --- |
-|description|`string` | 描述 |
-|default| `string` | 默认值 |
-|example| `string`| 示例 |
-|multiple_of| `google.protobuf.DoubleValue` | 倍数 |
-|maximum| `google.protobuf.DoubleValue`| 最大值 |
-|exclusive_maximum| `google.protobuf.BoolValue`|区间是否包含最大值 |
-|minimum| `google.protobuf.DoubleValue`| 最小值|
-|exclusive_minimum| `google.protobuf.BoolValue`|区间是否包含最小值 |
-|max_length| `google.protobuf.UInt64Value` | 最大长度，string类型|
-|min_length| `google.protobuf.UInt64Value`| 最小长度，string类型|
-|max_items| `google.protobuf.UInt64Value`| `repeated` 集合类型字段，最多元素数目|
-|min_items| `google.protobuf.UInt64Value`| `repeated` 集合类型字段，最多元素数目|
-|unique_items| `google.protobuf.BoolValue`| `repeated` 集合类型字段，元素是否唯一，`List vs Set`|
-|~type~| ~`JSONSchemaTypeHint`~|😢|
-|format| `string` | [JSONSchemaFormat](#jsonschemaformat)|
-|field_configuration| `FieldConfiguration`|✋ [参考](#fieldconfiguration) |
-|empty| `google.protobuf.BoolValue`| 是否可以为空-校验|
-|pattern| `string` | validation 扩展:正值表达式验证 `javax.validation.constraints.Pattern("^A-z$")` |
-|assert| `google.protobuf.BoolValue`|validation 扩展: `javax.validation.constraints.AssertTrue\AssertFalse`|
-|decimal_max|`string`|validation 扩展:`javax.validation.constraints.DecimalMax(value = "0.0", inclusive = false)`|
-|decimal_min|`string`|validation 扩展:`javax.validation.constraints.DecimalMin(value = "0.0", inclusive = false)`|
-|digits_integer|`google.protobuf.Int32Value`|validation 扩展:`javax.validation.constraints.Digits(integer=3, fraction=2)`|
-|digits_fraction|`google.protobuf.Int32Value`|validation 扩展:`javax.validation.constraints.Digits(integer=3, fraction=2)`|
-|email|`google.protobuf.BoolValue`|validation 扩展:`javax.validation.constraints.Email`|
-|time_constraint_type|`TimeConstraintType`|validation 扩展:枚举参考下面 [TimeConstraintType](#timeconstrainttype)|
-|date_format|`DateFormat`|日期format: 日期枚举类型参考下面 [DateFormat](#dateformat-枚举类型)|
-|customized_date_format|`string`|定制日期类型:符合标准日期定义规范(未强校验)|
-|mock| `Mock`| Mock规则 🏗️ |
-|read_only| `bool`| 未用 🚧|
-|extensions| `map<string, google.protobuf.Value>`| 未用 🚧，扩展说明|
-|enum| `repeated string`| 未用 🚧|
-|required| `repeated string` | 未用 🚧， 范围选择，通过枚举对象实现|
-|array| `repeated string`| 未用 🚧， 列表元素可选范围，通过枚举对象实现|
-|ref| `string` |未用 🚧, 外部对象引用，需全路径指定 **parameter配置时，如引用 Enum 对象**|
-|title|`string` |未用 🚧, 标题, 字段名称替代|
-|~max_properties~| `google.protobuf.UInt64Value`|~未用 🚧，Map元素最多key?~ |
-|~min_properties~| `google.protobuf.UInt64Value`|~未用 🚧，Map元素最多key?~ |
+| 字段                     | 类型                                   | 说明                                                                                        |
+|------------------------|--------------------------------------|-------------------------------------------------------------------------------------------|
+| description            | `string`                             | 描述                                                                                        |
+| default                | `string`                             | 默认值                                                                                       |
+| example                | `string`                             | 示例                                                                                        |
+| multiple_of            | `google.protobuf.DoubleValue`        | 倍数                                                                                        |
+| maximum                | `google.protobuf.DoubleValue`        | 最大值                                                                                       |
+| exclusive_maximum      | `google.protobuf.BoolValue`          | 区间是否包含最大值                                                                                 |
+| minimum                | `google.protobuf.DoubleValue`        | 最小值                                                                                       |
+| exclusive_minimum      | `google.protobuf.BoolValue`          | 区间是否包含最小值                                                                                 |
+| max_length             | `google.protobuf.UInt64Value`        | 最大长度，string类型                                                                             |
+| min_length             | `google.protobuf.UInt64Value`        | 最小长度，string类型                                                                             |
+| max_items              | `google.protobuf.UInt64Value`        | `repeated` 集合类型字段，最多元素数目                                                                  |
+| min_items              | `google.protobuf.UInt64Value`        | `repeated` 集合类型字段，最多元素数目                                                                  |
+| unique_items           | `google.protobuf.BoolValue`          | `repeated` 集合类型字段，元素是否唯一，`List vs Set`                                                    |
+| ~type~                 | ~`JSONSchemaTypeHint`~               | 😢                                                                                        |
+| format                 | `string`                             | [JSONSchemaFormat](#jsonschemaformat)                                                     |
+| field_configuration    | `FieldConfiguration`                 | ✋ [参考](#fieldconfiguration)                                                               |
+| empty                  | `google.protobuf.BoolValue`          | 是否可以为空-校验                                                                                 |
+| pattern                | `string`                             | validation 扩展:正值表达式验证 `javax.validation.constraints.Pattern("^A-z$")`                     |
+| assert                 | `google.protobuf.BoolValue`          | validation 扩展: `javax.validation.constraints.AssertTrue\AssertFalse`                      |
+| decimal_max            | `string`                             | validation 扩展:`javax.validation.constraints.DecimalMax(value = "0.0", inclusive = false)` |
+| decimal_min            | `string`                             | validation 扩展:`javax.validation.constraints.DecimalMin(value = "0.0", inclusive = false)` |
+| digits_integer         | `google.protobuf.Int32Value`         | validation 扩展:`javax.validation.constraints.Digits(integer=3, fraction=2)`                |
+| digits_fraction        | `google.protobuf.Int32Value`         | validation 扩展:`javax.validation.constraints.Digits(integer=3, fraction=2)`                |
+| email                  | `google.protobuf.BoolValue`          | validation 扩展:`javax.validation.constraints.Email`                                        |
+| time_constraint_type   | `TimeConstraintType`                 | validation 扩展:枚举参考下面 [TimeConstraintType](#timeconstrainttype)                            |
+| date_format            | `DateFormat`                         | 日期format: 日期枚举类型参考下面 [DateFormat](#dateformat-枚举类型)                                       |
+| customized_date_format | `string`                             | 定制日期类型:符合标准日期定义规范(未强校验)                                                                   |
+| mock                   | `Mock`                               | Mock规则 🏗️                                                                                |
+| read_only              | `bool`                               | 未用 🚧                                                                                     |
+| extensions             | `map<string, google.protobuf.Value>` | 未用 🚧，扩展说明                                                                                |
+| enum                   | `repeated string`                    | 未用 🚧                                                                                     |
+| required               | `repeated string`                    | 未用 🚧， 范围选择，通过枚举对象实现                                                                      |
+| array                  | `repeated string`                    | 未用 🚧， 列表元素可选范围，通过枚举对象实现                                                                  |
+| ref                    | `string`                             | 未用 🚧, 外部对象引用，需全路径指定 **parameter配置时，如引用 Enum 对象**                                         |
+| title                  | `string`                             | 未用 🚧, 标题, 字段名称替代                                                                         |
+| ~max_properties~       | `google.protobuf.UInt64Value`        | ~未用 🚧，Map元素最多key?~                                                                       |
+| ~min_properties~       | `google.protobuf.UInt64Value`        | ~未用 🚧，Map元素最多key?~                                                                       |
 
 ⚠️ 由于框架层引入常量设计机制， 所以很多需要通过 `enum`, `required`, `array` 控制的，通过枚举控制均都可弱化和替代掉。
 
@@ -253,34 +253,34 @@ field_configuration: {
 
 所以需要这里 `隐式` 的制定类型， 或者需要强制将内置类型对象转换成语言特定对象， 比如 `string` `隐式` 成一个 `DateTime`， 方便代码生成器推导宿主语言对象类型。
 
-| 字段 | 类型 | 说明 |OAS format|
-| --- | --- | --- | --- |
-|BOOLEAN|bool|类型boolean|bool|
-|INTEGER|integer|整型|int32|
-|DOUBLE|数字|double|double|
-|STRING|string|字符串|-|
-|FLOAT|float|浮点类型|float|
-|BIG_DECIMAL|bigDecimal|精度数字|big-decimal|
-|LONG|long|长整型|int64|
-|DATE|date|日期|date|
-|DATE_TIME|dateTime|日期时间|date-time|
-|TIME|time|时间|time|
-|UUID|uuid|UUID 对象|uuid|
-|PASSWORD|password|密码对象|password|
-|EMAIL|email|邮箱对象|email|
-|BINARY|binary|文件对象|binary|
+| 字段          | 类型         | 说明        | OAS format  |
+|-------------|------------|-----------|-------------|
+| BOOLEAN     | bool       | 类型boolean | bool        |
+| INTEGER     | integer    | 整型        | int32       |
+| DOUBLE      | 数字         | double    | double      |
+| STRING      | string     | 字符串       | -           |
+| FLOAT       | float      | 浮点类型      | float       |
+| BIG_DECIMAL | bigDecimal | 精度数字      | big-decimal |
+| LONG        | long       | 长整型       | int64       |
+| DATE        | date       | 日期        | date        |
+| DATE_TIME   | dateTime   | 日期时间      | date-time   |
+| TIME        | time       | 时间        | time        |
+| UUID        | uuid       | UUID 对象   | uuid        |
+| PASSWORD    | password   | 密码对象      | password    |
+| EMAIL       | email      | 邮箱对象      | email       |
+| BINARY      | binary     | 文件对象      | binary      |
 
 ⚠️ 谨慎使用，这也是为什么我们推崇，复杂对象通过 `Message` 定义， 避免这种 `Ad-hoc` Path/Query/Header `隐式`推断；
 固然通过强制 仅支持 `post`可以尽量避免， 但是 `ApiHug` 还是兼容了这些古老的做法。
 
 #### TimeConstraintType
 
-| 字段 | 类型 | 说明 |
-| --- | --- | --- |
-|FUTURE|时间校验|`@javax.validation.constraints.Future`|
-|FUTURE_OR_PRESENT|时间校验|`@javax.validation.constraints.FutureOrPresent`|
-|PAST|时间校验|`@javax.validation.constraints.Past`|
-|PAST_OR_PRESENT|时间校验|`@javax.validation.constraints.PastOrPresent`|
+| 字段                | 类型   | 说明                                              |
+|-------------------|------|-------------------------------------------------|
+| FUTURE            | 时间校验 | `@javax.validation.constraints.Future`          |
+| FUTURE_OR_PRESENT | 时间校验 | `@javax.validation.constraints.FutureOrPresent` |
+| PAST              | 时间校验 | `@javax.validation.constraints.Past`            |
+| PAST_OR_PRESENT   | 时间校验 | `@javax.validation.constraints.PastOrPresent`   |
 
 #### DateFormat 枚举类型
 
@@ -290,18 +290,18 @@ field_configuration: {
 
 如果使用 `customized_date_format` 推导宿主语言类型有不确定性⚠️， 而预定义可以分化： `DateTime`, `Time`, `Date` 更细的分类 ⭐⭐⭐。
 
-| 字段 | 类型 | 说明 |
-| --- | --- | --- |
-|BASIC_ISO_DATE|yyyyMMdd|比如 `20111203` 类型 `LocalDate`|
-|ISO_LOCAL_DATE|yyyy-MM-dd|比如 `2011-12-03` 类型 `LocalDate`|
-|ISO_LOCAL_TIME|HH:mm:ss|比如 `10:15:30` 类型 `LocalTime`|
-|ISO_LOCAL_DATE_TIME|yyyy-MM-dd T HH:mm:ss|比如 `2011-12-03T10:15:30` 类型 `LocalDateTime`|
-|YYYY_MM_DD_HH_MM_SS|yyyy-MM-dd HH:mm:ss|类型 `LocalDateTime`|
-|YYYY_MM_DD_HH_MM_SS_SSS|yyyy-MM-dd HH:mm:ss:SSS|类型 `LocalDateTime`|
-|SLASH_YYYY_MM_DD|yyyy/MM/dd|类型 `LocalDate`|
-|SLASH_YYYY_MM_DD_HH_MM_SS|yyyy/MM/dd HH:mm:ss|类型 `LocalDateTime`|
-|SLASH_YYYY_MM_DD_HH_MM_SS_SSS|yyyy/MM/dd HH:mm:ss:SSS|类型 `LocalDateTime`|
-|HH_MM|HH:mm|类型 `LocalTime`|
+| 字段                            | 类型                      | 说明                                          |
+|-------------------------------|-------------------------|---------------------------------------------|
+| BASIC_ISO_DATE                | yyyyMMdd                | 比如 `20111203` 类型 `LocalDate`                |
+| ISO_LOCAL_DATE                | yyyy-MM-dd              | 比如 `2011-12-03` 类型 `LocalDate`              |
+| ISO_LOCAL_TIME                | HH:mm:ss                | 比如 `10:15:30` 类型 `LocalTime`                |
+| ISO_LOCAL_DATE_TIME           | yyyy-MM-dd T HH:mm:ss   | 比如 `2011-12-03T10:15:30` 类型 `LocalDateTime` |
+| YYYY_MM_DD_HH_MM_SS           | yyyy-MM-dd HH:mm:ss     | 类型 `LocalDateTime`                          |
+| YYYY_MM_DD_HH_MM_SS_SSS       | yyyy-MM-dd HH:mm:ss:SSS | 类型 `LocalDateTime`                          |
+| SLASH_YYYY_MM_DD              | yyyy/MM/dd              | 类型 `LocalDate`                              |
+| SLASH_YYYY_MM_DD_HH_MM_SS     | yyyy/MM/dd HH:mm:ss     | 类型 `LocalDateTime`                          |
+| SLASH_YYYY_MM_DD_HH_MM_SS_SSS | yyyy/MM/dd HH:mm:ss:SSS | 类型 `LocalDateTime`                          |
+| HH_MM                         | HH:mm                   | 类型 `LocalTime`                              |
 
 自定义格式日期时间判断方式：
 
