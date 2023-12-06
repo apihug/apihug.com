@@ -23,7 +23,7 @@ description: 其他细节
 这样松散的关系会导致： 版本的不兼容， protoc vs grpc vs protobuf-gradle-plugin， 目前 Apihug 测试通过的版本集合是
 
 | 名称                               | 版本     |子包     | ApiHug Version |
-|----------------------------------|----------------------|----------------------|-----------------|------------|
+|----------------------------------|----------------------|----------------------|-----------------|
 | protoc                      | `3.21.7`| `protobuf-java` & `protobuf-java-util` |`[0.3.5-RELEASE,)`|
 | protobuf-gradle-plugin      | `0.8.19`| `com.google.protobuf:protobuf-gradle-plugin`|`[0.3.5-RELEASE,)`|
 | grpc                        | `1.50.0`| `grpc-stub` `grpc-protobuf`, `grpc-core` |`[0.3.5-RELEASE,)`|
