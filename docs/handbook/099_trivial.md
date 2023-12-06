@@ -25,8 +25,8 @@ description: 其他细节
 | 名称                               | 版本     |子包     | ApiHug Version |
 |----------------------------------|----------------------|----------------------|-----------------|
 | protoc                      | `3.21.7`| `protobuf-java` & `protobuf-java-util` |`[0.3.5-RELEASE,)`|
-| protobuf-gradle-plugin      | `0.8.19`| `com.google.protobuf:protobuf-gradle-plugin`|`[0.3.5-RELEASE,)`|
 | grpc                        | `1.50.0`| `grpc-stub` `grpc-protobuf`, `grpc-core` |`[0.3.5-RELEASE,)`|
+| protobuf-gradle-plugin      | `0.8.19`| `com.google.protobuf:protobuf-gradle-plugin`|`[0.3.5-RELEASE,)`|
 
 版本控制的细节，在ApiHug的 gradle 插件， 和 BOM 版本控制中已经预设好，兼容问题已经得到充分测试;
 
