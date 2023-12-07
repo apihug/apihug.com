@@ -1,13 +1,15 @@
-[
+{
+  "versions": [
     {
-        "name": "0.3.8-RELEASE",
-        "id": "0.3.8",
-        "enable": true,
-        "asDefault":true
+      "name": "0.3.8-RELEASE",
+      "id": "0.3.8",
+      "enable": true,
+      "asDefault": true
     },
     {
-        "name": "0.3.6-RELEASE",
-        "id": "0.3.6",
-        "enable": true
+      "name": "0.3.6-RELEASE",
+      "id": "0.3.6",
+      "enable": true
     }
-]
+  ]
+}
