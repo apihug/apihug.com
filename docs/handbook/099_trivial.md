@@ -31,12 +31,20 @@ description: 其他细节
 
 ⚠️除非项目中自己强制指定版本(强烈不建议)，可能会导致兼容问题。⚠️
 
+💁‍♀️为什么不升级到更高阶版本? 因为ApiHug 只是使用 protobuf 作为 DSL 载体，而不是他的序列化功能或者rpc扩展。
+
 ## Version Catalog
 
-TBD
+1. 统一版本管理格式
+2. 长期滚动发布控制(Rolling Release)
+
+ApiHug 自身项目采用 `libs.versions.toml` 文件 方式控制。
+
+[Sharing dependency versions between projects](https://docs.gradle.org/current/userguide/platforms.html)
 
 ## Refer
 
 1. [protobuf-gradle-plugin - git](https://github.com/google/protobuf-gradle-plugin)
 2. [protobuf - git](https://github.com/protocolbuffers/protobuf)
 3. [grpc - git](https://github.com/grpc/grpc)
+4. [Sharing dependency versions between projects](https://docs.gradle.org/current/userguide/platforms.html)
