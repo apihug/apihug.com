@@ -44,3 +44,11 @@
 
 
 ![ApiHug](./docs/public/apihug-platform.svg)
+
+---
+
+<img
+      align="center"
+      alt="Sange"
+      src="https://raw.githubusercontent.com/apihug/apihug.com/master/docs/public/image/wechat/sange.jpg"
+/>
