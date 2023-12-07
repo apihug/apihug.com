@@ -15,7 +15,7 @@
   <a href="https://github.com/apihug/apihug.com/blob/master/docs/us/README.md"><b>🙋‍♀️ Contact</b></a>
 </p>
 
-<h1 align="center"> 🤗 ApiHug × {Postman|Swagger|...} <br/>= 快↑ 准√ 省↓</h1>
+<h1 align="center"> 🤗 ApiHug × {Postman|Swagger|Api...} <br/>= 快↑ 准√ 省↓</h1>
 
 当前版本： **0.3.8-RELEASE**  `@2023-12-07`
 
