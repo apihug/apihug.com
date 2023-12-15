@@ -7,6 +7,11 @@
       "asDefault": true
     },
     {
+      "id": "0.3.8-RELEASE",
+      "name": "0.3.8",
+      "enable": true
+    },
+    {
       "id": "0.3.6-RELEASE",
       "name": "0.3.6",
       "enable": true
