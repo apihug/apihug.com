@@ -1,0 +1,8 @@
+.gradle
+.idea
+.qodana
+build
+.sandbox
+.local
+.out
+./help.md
