@@ -50,8 +50,4 @@
 
 ---
 
-<img
-      align="center"
-      alt="Sange"
-      src="https://raw.githubusercontent.com/apihug/apihug.com/master/docs/public/image/wechat/sange.jpg"
-/>
+![Sange](./docs/public/image/wechat/sange.jpg)
