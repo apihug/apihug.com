@@ -1,12 +1,4 @@
-<h1 align="center">
-    <img
-      align="center"
-      alt="ApiHug"
-      src="https://raw.githubusercontent.com/apihug/apihug.com/master/docs/public/image/logo.png"
-      style="width:100%;"
-    />
-</h1>
-
+# ![ApiHug-Logo](./docs/public/image/logo.png)
 
 <p align="center">
   <a href="https://github.com/apihug/apihug.com/blob/master/docs/handbook/README.md"><b>🔥 Handbook</b></a>  •
