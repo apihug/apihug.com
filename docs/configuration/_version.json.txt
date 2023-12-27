@@ -9,7 +9,7 @@
     {
       "id": "0.4.4-RELEASE",
       "name": "0.4.4",
-      "enable": true,
+      "enable": true
     },
     {
       "id": "0.4.1-RELEASE",
