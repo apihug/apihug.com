@@ -15,6 +15,8 @@
 
 💝 [最新版本查询](https://central.sonatype.com/search?q=com.apihug)， 注意， Apihug 采用整包发行， plugin + 基础包公用一个版本。
 
+🥰 欢迎使用： [IDE Plugin](./docs/IDE/README.md) 🥳🥳🥳
+
 [gitee](https://gitee.com/dearxuecom/apihug.com) | [github](https://github.com/apihug/apihug.com/)
 
 # 🖖 Intro
