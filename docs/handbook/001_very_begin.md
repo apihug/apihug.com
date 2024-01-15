@@ -235,4 +235,4 @@ Proto OAS 协议扩展解析编译插件 + 模板代码生成。
 
 ## Intellj
 
-TBD, EAT: 2023-12
+[IDEA Plugin 手册](../IDE/README.md)
