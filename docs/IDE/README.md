@@ -1,4 +1,16 @@
+[![Email](https://img.shields.io/badge/Help-Contact%20us-blue)](mailto:apihug@163.com)
+
+![Rating](https://img.shields.io/jetbrains/plugin/r/rating/23534-apihug--api-design-copilot)
+![Downloads](https://img.shields.io/jetbrains/plugin/d/23534-apihug--api-design-copilot)
+
+[![JetBrains IntelliJ Platform SDK Docs](https://jb.gg/badges/docs.svg)](https://plugins.jetbrains.com/docs/intellij)
+[![JetBrains IntelliJ Platform SDK Samples](https://img.shields.io/badge/JB-SDK%20samples-lightgreen)](https://github.com/JetBrains/intellij-sdk-code-samples)
+[![JetBrains IntelliJ Platform UI Guidelines](https://img.shields.io/badge/JB-UI%20Guidelines-lightgreen)](https://jetbrains.github.io/ui/)
+
+
 # IDE PLugin 极简手册
+
+<iframe width="384px" height="319px" src="https://plugins.jetbrains.com/embeddable/card/23534"></iframe>
 
 1. [快速开始](./001_very_begin.md)
 2. [项目模板](./002_starter.md)

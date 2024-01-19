@@ -17,6 +17,8 @@
 
 🥰 欢迎使用： [IDE Plugin](./docs/IDE/README.md) 🥳🥳🥳
 
+<iframe width="384px" height="319px" src="https://plugins.jetbrains.com/embeddable/card/23534"></iframe>
+
 [gitee](https://gitee.com/dearxuecom/apihug.com) | [github](https://github.com/apihug/apihug.com/)
 
 # 🖖 Intro
