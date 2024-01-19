@@ -10,7 +10,7 @@
 
 # IDE PLugin 极简手册
 
-<iframe width="384px" height="319px" src="https://plugins.jetbrains.com/embeddable/card/23534"></iframe>
+[ApiHug - API design Copilot](https://plugins.jetbrains.com/plugin/23534-apihug--api-design-copilot)
 
 1. [快速开始](./001_very_begin.md)
 2. [项目模板](./002_starter.md)

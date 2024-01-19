@@ -17,7 +17,7 @@
 
 🥰 欢迎使用： [IDE Plugin](./docs/IDE/README.md) 🥳🥳🥳
 
-<iframe width="384px" height="319px" src="https://plugins.jetbrains.com/embeddable/card/23534"></iframe>
+[💝ApiHug - API design Copilot💝](https://plugins.jetbrains.com/plugin/23534-apihug--api-design-copilot)
 
 [gitee](https://gitee.com/dearxuecom/apihug.com) | [github](https://github.com/apihug/apihug.com/)
 
