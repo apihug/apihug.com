@@ -21,6 +21,9 @@
 
 [gitee](https://gitee.com/dearxuecom/apihug.com) | [github](https://github.com/apihug/apihug.com/)
 
+🔥 [apihug-proto](https://github.com/apihug/apihug-proto/)  **proto DSL**
+
+
 # 🖖 Intro
 
 1. [ApiHug 简介](./docs/introduction/what-is-apihug.md)
