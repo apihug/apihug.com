@@ -9,15 +9,15 @@
 
 <h1 align="center"> 🤗 ApiHug × {Postman|Swagger|Api...} <br/>= 快↑ 准√ 省↓</h1>
 
-当前版本： **0.5.5-RELEASE**  `@2024-01-29`
+当前版本： **0.5.6-RELEASE**  `@2024-02-01`
 
-⚠️⚠️ 在正式 **1.0+** 版本前， 可能存在比较多bug, 不能保证小版本的兼容， 敬请保持随时同步和更新！(加好友入群，防止惊喜变成惊讶)
+⚠️ 在正式 **1.0+** 版本前， 可能存在比较多bug, 不能保证小版本的兼容， 敬请保持随时同步和更新！(加好友入群，防止惊喜变成惊讶)
 
 💝 [最新版本查询](https://central.sonatype.com/search?q=com.apihug)， 注意， Apihug 采用整包发行， plugin + 基础包公用一个版本。
 
 🥰 欢迎使用： [IDE Plugin](./docs/IDE/README.md) 🥳🥳🥳
 
-[💝ApiHug - API design Copilot💝](https://plugins.jetbrains.com/plugin/23534-apihug--api-design-copilot)
+💝 [ApiHug - API design Copilot](https://plugins.jetbrains.com/plugin/23534-apihug--api-design-copilot)
 
 🏠 [gitee](https://gitee.com/dearxuecom/apihug.com) | [github](https://github.com/apihug/apihug.com/)
 
