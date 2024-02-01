@@ -19,10 +19,9 @@
 
 [💝ApiHug - API design Copilot💝](https://plugins.jetbrains.com/plugin/23534-apihug--api-design-copilot)
 
-[gitee](https://gitee.com/dearxuecom/apihug.com) | [github](https://github.com/apihug/apihug.com/)
+🏠 [gitee](https://gitee.com/dearxuecom/apihug.com) | [github](https://github.com/apihug/apihug.com/)
 
 🔥 [apihug-proto](https://github.com/apihug/apihug-proto/)  **proto DSL**
-
 
 # 🖖 Intro
 
