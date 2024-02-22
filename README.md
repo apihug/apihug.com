@@ -9,7 +9,12 @@
 
 <h1 align="center"> 🤗 ApiHug × {Postman|Swagger|Api...} <br/>= 快↑ 准√ 省↓</h1>
 
-当前版本： **0.5.7-RELEASE**  `@2024-02-22`
+当前版本： **0.6.0-RELEASE**  `@2024-02-22`
+
+| ApiHug          | ApiHug-IDE         | 说明        | 时间        |
+|-------------|------------|-----------|-----------|
+| 0.6.0-RELEASE+     | 0.2.0+       | IDE & SDK 不再往后兼容 [里程碑一](./docs/versions/001-milestone.md)|**2024-02-22**|
+| 0.5.*-RELEASE-     | 0.1.0*       | 兼容 |**2023-12-28**|
 
 ⚠️ 在正式 **1.0+** 版本前， 可能存在比较多bug, 不能保证小版本的兼容， 敬请保持随时同步和更新！(加好友入群，防止惊喜变成惊讶)
 
@@ -23,30 +28,29 @@
 
 🔥 [apihug-proto](https://github.com/apihug/apihug-proto/)  **proto DSL**
 
-# 🖖 Intro
+## 🖖 Intro
 
 1. [ApiHug 简介](./docs/introduction/what-is-apihug.md)
 
-# 🔥 Handbook
+## 🔥 Handbook
 
 1. [Start ApiHug in 5 Mins](./docs/handbook/001_very_begin.md)
 
-# 📚 Tutorials
+## 📚 Tutorials
 
 1. [Hope Guide Git](https://github.com/apihug/hope-guides)
 
-# 💎 Design Principles
+## 💎 Design Principles
 
 1. [极具同理心](./docs/principles/why-empathy-is-important.md)
 2. [单一信任源](./docs/principles/why-single-source-of-truth-is-important.md)
 3. [融合和共生](./docs/principles/why-leverage-exist-resource.md)
 4. [开放和协同](./docs/principles/why-open-is-important.md)
 
-# 🙋‍♀️ Contact Us
-
+## 🙋‍♀️ Contact Us
 
 ![ApiHug](./docs/public/apihug-platform.svg)
 
 ---
 
-![Sange](./docs/public/image/wechat/sange.jpg)
+![Aaron](./docs/public/image/wechat/sange.jpg)
