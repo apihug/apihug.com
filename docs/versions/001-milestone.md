@@ -55,7 +55,7 @@
     empty: FALSE;
 ```
 
-**2. `authorization_struct`  --> `rbac`***
+**2. `authorization_struct`  --> `rbac`**
 
 🏁 find all the broken like:
 
