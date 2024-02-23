@@ -1,6 +1,7 @@
 # Milestone(一)
 
 ⚠️ 由于修改不再兼容老的风格迁移有风险， 包含基础包,IDE plugin
+⚠️ This is a no-compatible change, Both the SDK and IDE plugin not compatible with old version.
 
 ## ApiHug [0.6.0-RELEASE] -  2024-02-22
 
@@ -26,6 +27,7 @@
 ## Steps
 
 **升级依赖包+IDE版本**：
+**Upgrade SDK+IDE Version**：
 
 ## Project
 
@@ -34,7 +36,7 @@
 
 ## Plugin
 
-1. download: [ApiHug - API design Copilot](https://plugins.jetbrains.com/plugin/23534-apihug--api-design-copilot)  `0.2.0`+ 版本
+1. download: [ApiHug - API design Copilot](https://plugins.jetbrains.com/plugin/23534-apihug--api-design-copilot)  `0.2.0`+
 2. upgrade in IDE:
 
 ### Code
