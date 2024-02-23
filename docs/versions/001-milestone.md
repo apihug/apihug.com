@@ -41,9 +41,11 @@
 1. download: [ApiHug - API design Copilot](https://plugins.jetbrains.com/plugin/23534-apihug--api-design-copilot)  `0.2.0`+
 2. upgrade in IDE:
 
+![milestone02](../public/image/blogs/milstone02.png)
+
 ### Code
 
-**1.`google.protobuf.BoolValue` -> `hope.mock.BoolRule`**
+**1.`google.protobuf.BoolValue` -> `hope.common.BoolType`**
 
 🏁 find all the broken like:
 
