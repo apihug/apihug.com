@@ -10,8 +10,8 @@
 
 - `google.protobuf.BoolValue` -> `hope.common.BoolType`, less code, more straightforward. [3 kinds Boolean](../blog/2024Q1/20240222-3-kinds-boolean-issue.md)
 - message field deprecated flag picker logic
-- `authorization_struct`  --> `rbac` make it more user friendly: `RBAC rbac = 2;`
-- support `google.protobuf.BoolValue blank = 49;` for the `String` specific field
+- `authorization_struct`  --> `rbac` make it more human friendly: `RBAC rbac = 2;`
+- support `hope.common.BoolType blank = 49;` for the `String` specific field
    - `empty` vs `blank`,  blank more for the string field, string field may not empty, but may be blank, as it include no qualify character, like space, tab, etc.
 - bug fix
 
