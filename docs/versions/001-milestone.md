@@ -2,7 +2,7 @@
 
 ⚠️ 由于修改不再兼容老的风格迁移有风险， 包含基础包,IDE plugin
 
-⚠️ This is a no-compatible change, Both the SDK and IDE plugin not compatible with old version.
+⚠️ This is an incompatible change, Both the SDK and IDE plugin not compatible with previous version.
 
 ## ApiHug [0.6.0-RELEASE] -  2024-02-22
 
