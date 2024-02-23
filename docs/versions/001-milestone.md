@@ -8,7 +8,7 @@
 
 ### SDK Features
 
-- `google.protobuf.BoolValue` -> `hope.mock.BoolRule`, less code, more straightforward.
+- `google.protobuf.BoolValue` -> `hope.mock.BoolRule`, less code, more straightforward. [3 kinds Boolean](../blog/2024Q1/20240222-3-kinds-boolean-issue.md)
 - message field deprecated flag picker logic
 - `authorization_struct`  --> `rbac` make it more user friendly: `RBAC rbac = 2;`
 - support `google.protobuf.BoolValue blank = 49;` for the `String` specific field
