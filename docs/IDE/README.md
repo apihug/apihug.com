@@ -7,10 +7,11 @@
 [![JetBrains IntelliJ Platform SDK Samples](https://img.shields.io/badge/JB-SDK%20samples-lightgreen)](https://github.com/JetBrains/intellij-sdk-code-samples)
 [![JetBrains IntelliJ Platform UI Guidelines](https://img.shields.io/badge/JB-UI%20Guidelines-lightgreen)](https://jetbrains.github.io/ui/)
 
-
 # IDE PLugin 极简手册
 
 [ApiHug - API design Copilot](https://plugins.jetbrains.com/plugin/23534-apihug--api-design-copilot)
+
+😄 [IDE FAQ](./999_FAQ.md)
 
 1. [快速开始](./001_very_begin.md)
 2. [项目模板](./002_starter.md)
