@@ -9,7 +9,7 @@
 
 <h1 align="center"> 🤗 ApiHug × {Postman|Swagger|Api...} <br/>= 快↑ 准√ 省↓</h1>
 
-当前版本： <a target="_blank" href="https://search.maven.org/artifact/com.apihug/it-bom"><img src="https://img.shields.io/maven-central/v/com.apihug/it-bom.svg?label=Maven%20Central" /></a>
+<a target="_blank" href="https://search.maven.org/artifact/com.apihug/it-bom"><img src="https://img.shields.io/maven-central/v/com.apihug/it-bom.svg?label=Maven%20Central" /></a>
 
 | ApiHug          | ApiHug-IDE         | 说明        | 时间        |
 |-------------|------------|-----------|-----------|
