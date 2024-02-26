@@ -28,3 +28,4 @@
 13. [API Stub设计](./010_stub.md)
 14. [API配置服务配置](./099_01_settings_server.md)
 15. [API配置常用配置](./099_02_settings_common.md)
+16. [IDE FAQ](./999_FAQ.md)
