@@ -15,7 +15,7 @@ Apihug 包含组件
 
 ## 快速跑个例子
 
-版本 [发行信息](../release/README.md)， 当前最新 `0.6.0-RELEASE` (未到1.0.0前，版本升级比较快，注意通知)
+版本 [发行信息](../release/README.md)， 当前最新 <a target="_blank" href="https://search.maven.org/artifact/com.apihug/it-bom"><img src="https://img.shields.io/maven-central/v/com.apihug/it-bom.svg?label=Maven%20Central" /></a> (未到1.0.0前，版本升级比较快，注意通知)
 
 💝 [最新版本查询](https://central.sonatype.com/search?q=com.apihug)， 注意， apihug 采用整包发行， plugin + 基础包公用一个版本。
 
