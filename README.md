@@ -1,6 +1,7 @@
 # ![ApiHug-Logo](./docs/public/image/logo.png)
 
 <p align="center">
+  <a target="_blank" href="https://search.maven.org/artifact/com.apihug/it-bom"><img src="https://img.shields.io/maven-central/v/com.apihug/it-bom.svg?label=Maven%20Central" /></a>  •
   <a href="https://github.com/apihug/apihug.com/blob/master/docs/handbook/README.md"><b>🔥 Handbook</b></a>  •
   <a href="https://github.com/apihug/apihug.com/blob/master/docs/design/README.md"><b>⚙️ Design</b></a> •
   <a href="https://github.com/apihug/apihug.com/blob/master/docs/usecase/README.md"><b>📚  Use Case</b></a> •
