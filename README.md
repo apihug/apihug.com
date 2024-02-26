@@ -1,7 +1,6 @@
 # ![ApiHug-Logo](./docs/public/image/logo.png)
 
 <p align="center">
-  <a target="_blank" href="https://search.maven.org/artifact/com.apihug/it-bom"><img src="https://img.shields.io/maven-central/v/com.apihug/it-bom.svg?label=Maven%20Central" /></a>  •
   <a href="https://github.com/apihug/apihug.com/blob/master/docs/handbook/README.md"><b>🔥 Handbook</b></a>  •
   <a href="https://github.com/apihug/apihug.com/blob/master/docs/design/README.md"><b>⚙️ Design</b></a> •
   <a href="https://github.com/apihug/apihug.com/blob/master/docs/usecase/README.md"><b>📚  Use Case</b></a> •
@@ -10,7 +9,7 @@
 
 <h1 align="center"> 🤗 ApiHug × {Postman|Swagger|Api...} <br/>= 快↑ 准√ 省↓</h1>
 
-当前版本： **0.6.0-RELEASE**  `@2024-02-22`
+当前版本： <a target="_blank" href="https://search.maven.org/artifact/com.apihug/it-bom"><img src="https://img.shields.io/maven-central/v/com.apihug/it-bom.svg?label=Maven%20Central" /></a>
 
 | ApiHug          | ApiHug-IDE         | 说明        | 时间        |
 |-------------|------------|-----------|-----------|
