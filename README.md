@@ -36,7 +36,7 @@
 
 ## 📚 Tutorials
 
-1. [Hope Guide Git](https://github.com/apihug/hope-guides)
+1. [Hope Full Example Git](https://github.com/apihug/apihug-full-demo)
 
 ## 💎 Design Principles
 

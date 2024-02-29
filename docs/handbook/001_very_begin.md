@@ -21,7 +21,7 @@ Apihug 包含组件
 
 建议采用 [gradle catalog](https://docs.gradle.org/current/userguide/platforms.html) + BOM 方式统一控制版本，以防版本冲突！
 
-例子 [Hope Guide Git](https://github.com/apihug/hope-guides)
+例子 [Hope Full Example Git](https://github.com/apihug/apihug-full-demo)
 
 项目模板 + Intellj 项目入口， 设计进行中 🚧
 
