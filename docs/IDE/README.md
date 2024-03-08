@@ -9,6 +9,11 @@
 
 # IDE PLugin 极简手册
 
+😆 视频教程：
+
+1. [ApiHug101-Bilibili](https://www.bilibili.com/video/BV1KK421k7J8/)
+2. [ApiHug101 Youtube](https://youtube.com/@ApiHug?si=C1yw0poHA01zbmyj)
+
 [ApiHug - API design Copilot](https://plugins.jetbrains.com/plugin/23534-apihug--api-design-copilot)
 
 😄 [IDE FAQ](./999_FAQ.md)
