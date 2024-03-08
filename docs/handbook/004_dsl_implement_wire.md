@@ -563,9 +563,10 @@ hopeWire {
 | validationVersion               | Validation版本   | `String`|         | 未启用                                                  |
 | swaggerVersion                  | Swagger版本      | `String`|         | 未启用                                                  |
 
-
 ## Refer
 
 1. [The OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification)
 2. [OpenAPI Specification](https://swagger.io/specification/)  Version 3.1.0 since 2023.
 3. [Spring file upload](https://www.baeldung.com/spring-file-upload)
+4. [ApiHug101-Bilibili](https://www.bilibili.com/video/BV1KK421k7J8/)
+5. [ApiHug101-Youtube](https://youtube.com/@ApiHug?si=C1yw0poHA01zbmyj)

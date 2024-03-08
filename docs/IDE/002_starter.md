@@ -18,3 +18,8 @@ description: IDE Plugin 项目模板, 快速开启项目
 ![Starter 03](../public/image/idea/099_file_template.png)
 
 `TBD` 🏗️
+
+## Reference
+
+1. [ApiHug101-Bilibili](https://www.bilibili.com/video/BV1KK421k7J8/)
+2. [ApiHug101-Youtube](https://youtube.com/@ApiHug?si=C1yw0poHA01zbmyj)

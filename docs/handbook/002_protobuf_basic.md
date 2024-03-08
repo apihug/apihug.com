@@ -231,3 +231,5 @@ message Value {
 8. [深入浅出：如何正确使用 protobuf](https://zhuanlan.zhihu.com/p/406832315)
 9. [WSDL -WSDL is an XML notation for describing a web service](https://www.w3.org/TR/wsdl/)
 10. [Thrift IDL](https://thrift.apache.org/docs/idl)
+11. [ApiHug101-Bilibili](https://www.bilibili.com/video/BV1KK421k7J8/)
+12. [ApiHug101-Youtube](https://youtube.com/@ApiHug?si=C1yw0poHA01zbmyj)

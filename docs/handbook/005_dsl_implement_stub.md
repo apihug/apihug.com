@@ -95,3 +95,5 @@ hopeStub {
 ## Refer
 
 1. [The OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification)
+2. [ApiHug101-Bilibili](https://www.bilibili.com/video/BV1KK421k7J8/)
+3. [ApiHug101-Youtube](https://youtube.com/@ApiHug?si=C1yw0poHA01zbmyj)
