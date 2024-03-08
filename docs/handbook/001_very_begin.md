@@ -8,6 +8,10 @@ description: 开箱即用apihug, apihug 依赖包， apihug 命令，5分钟开�
 1. [ApiHug101-Bilibili](https://www.bilibili.com/video/BV1KK421k7J8/)
 2. [ApiHug101-Youtube](https://youtube.com/@ApiHug?si=C1yw0poHA01zbmyj)
 
+佐以IDEA plugin 更好食用：
+
+💝 IDEA 插件： [ApiHug - API design Copilot](https://plugins.jetbrains.com/plugin/23534-apihug--api-design-copilot)  &nbsp;&nbsp; [Plugin Handbook](../IDE/README.md)  &nbsp;&nbsp; [Plugin FAQ](../IDE/999_FAQ.md)
+
 ## 版本信息
 
 Apihug 包含组件

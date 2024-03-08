@@ -3,9 +3,17 @@ title: 快速开始
 description: IDE 插件设置
 ---
 
-插件版本 **0.2.0**  @ `2024-02-26`
+插件版本 **0.2.3**  @ `2024-03-08`
 
 ⚠️及时更新升级ApiHug 插件⚠️
+
+💝 IDEA 插件： [ApiHug - API design Copilot](https://plugins.jetbrains.com/plugin/23534-apihug--api-design-copilot)
+
+[Plugin Handbook](./README.md)  &nbsp;&nbsp; [Plugin FAQ](./999_FAQ.md)
+
+![Rating](https://img.shields.io/jetbrains/plugin/r/rating/23534-apihug--api-design-copilot)
+![Downloads](https://img.shields.io/jetbrains/plugin/d/23534-apihug--api-design-copilot)
+
 
 ## 安装
 
