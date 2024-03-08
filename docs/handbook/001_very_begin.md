@@ -5,8 +5,8 @@ description: 开箱即用apihug, apihug 依赖包， apihug 命令，5分钟开�
 
 😆 视频教程：
 
-1. [ApiHug101-001开启篇-bilibili](https://www.bilibili.com/video/BV1KK421k7J8/)
-2. [ApiHug101 Youtube](https://youtube.com/@ApiHug?si=C1yw0poHA01zbmyj)
+1. [ApiHug101-Bilibili](https://www.bilibili.com/video/BV1KK421k7J8/)
+2. [ApiHug101-Youtube](https://youtube.com/@ApiHug?si=C1yw0poHA01zbmyj)
 
 ## 版本信息
 
