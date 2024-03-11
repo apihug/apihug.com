@@ -56,4 +56,4 @@
 
 ---
 
-![api-hug-contact](./docs/public/image/apihug-001)
+![api-hug-contact](./docs/public/image/apihug-001.gif)
