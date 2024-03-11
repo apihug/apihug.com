@@ -56,4 +56,4 @@
 
 ---
 
-![Aaron](./docs/public/image/wechat/sange.jpg)
+![api-hug-contact](./docs/public/image/apihug-001)
