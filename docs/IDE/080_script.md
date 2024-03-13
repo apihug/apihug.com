@@ -3,7 +3,9 @@ title: IDE Plugin 前置后置脚本
 description: API 脚本管理
 ---
 
-⚠️⚠️ After SDK `0.6.8-RELEASE`+  & IDEA Plugin `0.2.5`+
+⚠️⚠️ After SDK `0.6.9-RELEASE`+  & IDEA Plugin `0.2.5`+
+
+<a target="_blank" href="https://search.maven.org/artifact/com.apihug/it-bom"><img src="https://img.shields.io/maven-central/v/com.apihug/it-bom.svg?label=Maven%20Central" /></a>
 
 ## API 脚本管理
 
@@ -80,10 +82,11 @@ description: API 脚本管理
 
 注意， pay attention: ⚠️
 
-1. `dummy` 对象为辅助你设计阶段，代码自动完成，提交前请注释掉(运行前可框架替换，但是如果变形无法处理)
-2. 项目需要整体 gradle build 下，否则可能上下文获取不到，这个是一次性工作
-3. groovy 语法和java 差不多， 基本通用，而且更简洁， 结尾无需 `;`
-4. 使用上下文的 `logger`输出信息， 勿用`System.out`；
+1. `dummy` 对象为辅助你设计阶段，代码自动完成，运行时会调整，勿动
+2. `// Place your logic here` 这个下面开始你的代码。
+3. 项目需要整体 `gradle build` 下，否则可能上下文获取不到，代码提示无法工作，这个是一次性工作
+4. groovy 语法和java 差不多， 基本通用，而且更简洁， 结尾无需 `;`
+5. 使用上下文的 `logger`输出信息， 勿用`System.out`；
 
 ### Prior Script
 
