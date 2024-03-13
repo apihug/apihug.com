@@ -97,17 +97,26 @@ description: API 脚本管理
 import hope.common.script.HTTPRequest
 import hope.common.script.LoggerAdapter
 
-/**
- * 1. Comment below two lines of code before you submit this script
- * 2. Un-comment it for easy code auto-complete during edit mode
- * 3. Fellow the groovy syntax, Java syntax almost can work
- */
-
+/************************************************************************
+ * 1. Do not touch code below, it will be injected at runtime
+ * 2. Fellow the groovy syntax, Java syntax almost can work
+ ************************************************************************/
 
 HTTPRequest request = HTTPRequest.DUMMY
-LoggerAdapter logger= LoggerAdapter.DUMMY
+LoggerAdapter logger = LoggerAdapter.DUMMY
 
-//request.getHeader("key");
+/*************************************************************************/
+
+// Place your logic here
+
+headerKey = request.getHeader("key");
+
+if (headerKey != null) {
+    logger.warn("we has header value $headerKey")
+} else {
+    logger.warn("we has no header value set")
+}
+
 //request.setHeader("key","value");
 
 
@@ -127,15 +136,18 @@ import hope.common.script.HTTPResponse
 import hope.common.script.LoggerAdapter
 import hope.common.script.RuntimeContext
 
-/**
- * 1. Comment below two lines of code before you submit this script
- * 2. Un-comment it for easy code auto-complete during edit mode
- * 3. Fellow the groovy syntax, Java syntax almost can work
- */
+/************************************************************************
+ * 1. Do not touch code below, it will be injected at runtime
+ * 2. Fellow the groovy syntax, Java syntax almost can work
+ ************************************************************************/
 
 HTTPResponse response = HTTPResponse.DUMMY
-LoggerAdapter logger= LoggerAdapter.DUMMY
+LoggerAdapter logger = LoggerAdapter.DUMMY
 RuntimeContext runtime = RuntimeContext.DUMMY
+
+/*************************************************************************/
+
+// Place your logic here
 
 response.getHeader("key");
 
