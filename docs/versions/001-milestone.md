@@ -122,3 +122,7 @@ Caused by: java.lang.ClassNotFoundException: org.springframework.data.jdbc.core.
 
 	... 66 common frames omitted
 ```
+
+---
+
+![api-hug-contact](../public/image/apihug-001.gif)
