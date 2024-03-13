@@ -78,7 +78,19 @@ description: API 脚本管理
 
 ## Sample Template
 
+注意， pay attention: ⚠️
+
+1. `dummy` 对象为辅助你设计阶段，代码自动完成，提交前请注释掉(运行前可框架替换，但是如果变形无法处理)
+2. 项目需要整体 gradle build 下，否则可能上下文获取不到，这个是一次性工作
+3. groovy 语法和java 差不多， 基本通用，而且更简洁， 结尾无需 `;`
+4. 使用上下文的 `logger`输出信息， 勿用`System.out`；
+
 ### Prior Script
+
+上下文提供：
+
+1. `request`， 原始请求对象
+2. `logger`， logger 输出
 
 ```groovy
 
@@ -102,6 +114,12 @@ LoggerAdapter logger= LoggerAdapter.DUMMY
 ```
 
 ### Post Script
+
+上下文提供：
+
+1. `response`， 原始返回体
+2. `logger`， logger 输出
+3. `runtime`， 运行时环境变量修改
 
 ```groovy
 
