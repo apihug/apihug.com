@@ -97,10 +97,10 @@
 ## Spring version
 
 1. check the spring version: `3.2+`
-2. other 3rd party lib: **cloud**, **mybatis** etc.
+2. other 3rd party lib: **cloud(2023+)**, **mybatis** etc.
 3. search google for the key words, or contact me!
 
-**factoryBeanObjectType** issue:
+**factoryBeanObjectType** issue [Invalid value type for attribute 'factoryBeanObjectType': java.lang.String](https://github.com/spring-projects/spring-framework/issues/31247):
 
 ```shell
 java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration.propertySourcesPlaceholderConfigurer
