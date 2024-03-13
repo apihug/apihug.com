@@ -76,6 +76,53 @@ description: API 脚本管理
 | `void updateEnvVariable(String name, Object value)`     |     覆盖当前环境变量   |-|
 | `void updateEnvParameter(String name, Object value)`     |    覆盖当前环境参数    |-|
 
+## Sample Template
+
+### Prior Script
+
+```groovy
+
+import hope.common.script.HTTPRequest
+import hope.common.script.LoggerAdapter
+
+/**
+ * 1. Comment below two lines of code before you submit this script
+ * 2. Un-comment it for easy code auto-complete during edit mode
+ * 3. Fellow the groovy syntax, Java syntax almost can work
+ */
+
+
+HTTPRequest request = HTTPRequest.DUMMY
+LoggerAdapter logger= LoggerAdapter.DUMMY
+
+//request.getHeader("key");
+//request.setHeader("key","value");
+
+
+```
+
+### Post Script
+
+```groovy
+
+import hope.common.script.HTTPResponse
+import hope.common.script.LoggerAdapter
+import hope.common.script.RuntimeContext
+
+/**
+ * 1. Comment below two lines of code before you submit this script
+ * 2. Un-comment it for easy code auto-complete during edit mode
+ * 3. Fellow the groovy syntax, Java syntax almost can work
+ */
+
+HTTPResponse response = HTTPResponse.DUMMY
+LoggerAdapter logger= LoggerAdapter.DUMMY
+RuntimeContext runtime = RuntimeContext.DUMMY
+
+response.getHeader("key");
+
+```
+
 ## Reference
 
 1. [ApiHug101-Bilibili](https://www.bilibili.com/video/BV1KK421k7J8/)
