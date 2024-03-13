@@ -4,7 +4,7 @@
 
 ⚠️ This is an incompatible change, Both the SDK and IDE plugin not compatible with previous version.
 
-⚠️ Upgrade the Spring boot to `3.2+` and if any incompatible 3rd party libs(Cloud etc)
+⚠️ Upgrade the [Spring boot](#spring-version) to `3.2+` and if any incompatible 3rd party libs(Cloud etc)
 
 😆 Guide：
 
@@ -97,7 +97,8 @@
 ## Spring version
 
 1. check the spring version: `3.2+`
-2. other 3rd party lib: cloud, mybatis etc.
+2. other 3rd party lib: **cloud**, **mybatis** etc.
+3. search google for the key words, or contact me!
 
 **factoryBeanObjectType** issue:
 
