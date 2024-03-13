@@ -4,6 +4,8 @@
 
 ⚠️ This is an incompatible change, Both the SDK and IDE plugin not compatible with previous version.
 
+⚠️ Upgrade the Spring boot to `3.2+` and if any incompatible 3rd party libs(Cloud etc)
+
 😆 Guide：
 
 1. [ApiHug101-Bilibili](https://www.bilibili.com/video/BV1KK421k7J8/)
@@ -91,3 +93,31 @@
 ```
 
 🥳🥳🥳 all done!
+
+## Spring version
+
+1. check the spring version: `3.2+`
+2. other 3rd party lib: cloud, mybatis etc.
+
+**factoryBeanObjectType** issue:
+
+```shell
+java.lang.IllegalStateException: Error processing condition on org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration.propertySourcesPlaceholderConfigurer
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60)
+Caused by: java.lang.IllegalArgumentException: Invalid value type for attribute 'factoryBeanObjectType': java.lang.String
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getTypeForFactoryBeanFromAttributes(FactoryBeanRegistrySupport.java:86)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:837)
+  ...
+	... 15 common frames omitted
+```
+
+**MappingJdbcConverter** issue;
+
+```shell
+	at hope.common.spring.data.persistence.config.HopeAbstractJdbcConfiguration.jdbcConverter(HopeAbstractJdbcConfiguration.java:133)
+  ...
+Caused by: java.lang.ClassNotFoundException: org.springframework.data.jdbc.core.convert.MappingJdbcConverter
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+
+	... 66 common frames omitted
+```
