@@ -1,4 +1,4 @@
-# ![ApiHug-Logo](./docs/public/image/logo.png)
+# ![ApiHug-Logo](./docs/public/image/logo2.png)
 
 <p align="center">
   <a href="https://github.com/apihug/apihug.com/blob/master/docs/handbook/README.md"><b>🔥 Handbook</b></a>  •
