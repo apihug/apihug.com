@@ -33,5 +33,5 @@ description: 使用 Proto Buffer 实现DSL, DSL 描述 OAS OpenAPI Specification
 2. [Google Open API Protos](https://github.com/googleapis/googleapis/tree/master/google/api) ； public Google APIs that support both REST and gRPC protocols. 
 3. [The OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification)
 4. [Jetbrains Domain-Specific Languages](https://www.jetbrains.com/mps/concepts/domain-specific-languages/)
-5. [ApiHug101-Bilibili](https://www.bilibili.com/video/BV1KK421k7J8/)
+5. [ApiHug101-Bilibili](https://space.bilibili.com/666522636)
 6. [ApiHug101-Youtube](https://youtube.com/@ApiHug?si=C1yw0poHA01zbmyj)

@@ -9,6 +9,8 @@ description: API 脚本管理
 
 **Plugin**: [ApiHug - API design Copilot](https://plugins.jetbrains.com/plugin/23534-apihug--api-design-copilot)
 
+![script](../public/image/idea/script.png)
+
 ## API 脚本管理
 
 1. `groovy` 语法
@@ -160,5 +162,5 @@ response.getHeader("key");
 
 ## Reference
 
-1. [ApiHug101-Bilibili](https://www.bilibili.com/video/BV1KK421k7J8/)
+1. [ApiHug101-Bilibili](https://space.bilibili.com/666522636)
 2. [ApiHug101-Youtube](https://youtube.com/@ApiHug?si=C1yw0poHA01zbmyj)

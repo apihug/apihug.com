@@ -48,5 +48,5 @@ ApiHug 自身项目采用 `libs.versions.toml` 文件 方式控制。
 2. [protobuf - git](https://github.com/protocolbuffers/protobuf)
 3. [grpc - git](https://github.com/grpc/grpc)
 4. [Sharing dependency versions between projects](https://docs.gradle.org/current/userguide/platforms.html)
-5. [ApiHug101-Bilibili](https://www.bilibili.com/video/BV1KK421k7J8/)
+5. [ApiHug101-Bilibili](https://space.bilibili.com/666522636)
 6. [ApiHug101-Youtube](https://youtube.com/@ApiHug?si=C1yw0poHA01zbmyj)
