@@ -5,7 +5,7 @@ description: API 脚本管理
 
 ⚠️⚠️ After SDK `0.6.9-RELEASE`+  & IDEA Plugin `0.2.5`+
 
-<a target="_blank" href="https://search.maven.org/artifact/com.apihug/it-bom"><img src="https://img.shields.io/maven-central/v/com.apihug/it-bom.svg?label=Maven%20Central" /></a>
+<a target="_blank" href="https://search.maven.org/artifact/com.apihug/it-bom"><img src="https://img.shields.io/maven-central/v/com.apihug/it-bom.svg?label=Maven%20Central" /></a>  [ApiHug - API design Copilot](https://plugins.jetbrains.com/plugin/23534-apihug--api-design-copilot)
 
 ## API 脚本管理
 
