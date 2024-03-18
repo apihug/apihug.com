@@ -1,6 +1,6 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-## [0.7.2-RELEASE] - 2024-03-15
+## [0.7.3-RELEASE] - 2024-03-15
 ### Features
 - fix feign stub issue, code break
 
