@@ -9,6 +9,8 @@ description: 知识库管理
 
 **Plugin**: [ApiHug - API design Copilot](https://plugins.jetbrains.com/plugin/23534-apihug--api-design-copilot)
 
+if your plugin still 0.1* please follow this: [0.1->0.2* plugin migration](../versions/001-milestone.md)
+
 ## 什么是知识库
 
 🎁 **团队共享设计标准共识**, **Team-shared design standards consensus**
