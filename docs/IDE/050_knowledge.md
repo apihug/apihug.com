@@ -19,6 +19,21 @@ description: 知识库管理
 
 ## 配置
 
+![KB](../public/image/idea/050_kb_01.png)
+
+1. `Topbar>ApiHug>Knowledge`
+2. Actions
+   1. Add:  Add new knowledge
+   2. Delete: Remove a knowledge
+   3. Download Template: download Excel template for edit by batch
+   4. Import from template: import a modified excel/json file
+   5. Export for share: export current knowledge for share with other members
+3. Double click table row for modify!
+
+![KB2](../public/image/idea/050_kb_02.png)
+
+1. type for auto-complete
+
 ### 模板
 
 1. 快速构建
