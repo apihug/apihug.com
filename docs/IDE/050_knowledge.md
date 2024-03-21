@@ -25,7 +25,7 @@ description: 知识库管理
 2. Actions
    1. Add:  Add new knowledge
    2. Delete: Remove a knowledge
-   3. Download Template: download Excel template for edit by batch
+   3. Download Template: download Excel template for edit by batch  [中文模板](../public/image/idea/template/cn.xlsx)， [English template](../public/image/idea/template/en.xlsx)
    4. Import from template: import a modified excel/json file
    5. Export for share: export current knowledge for share with other members
 3. Double click table row for modify!
