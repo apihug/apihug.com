@@ -1,6 +1,6 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-## [0.7.4-RELEASE] - 2024-03-12
+## [0.7.4-RELEASE] - 2024-03-22
 ### Features
 - Tiny code template change: Combinator must has both authorities and roles, feign configuration comments
 
