@@ -1,5 +1,9 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
+## [0.7.4-RELEASE] - 2024-03-12
+### Features
+- Tiny code template change: Combinator must has both authorities and roles, feign configuration comments
+
 ## [0.7.3-RELEASE] - 2024-03-15
 ### Features
 - fix feign stub issue, code break

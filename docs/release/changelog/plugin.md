@@ -1,10 +1,18 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
+## [0.2.6] -  2024-03-22
+
+### Features
+- [Knowledge](../../IDE/050_knowledge.md) setting for team-based domain design principle
+- Layout of the debug tool window's tab panel
+- Migrate from 0.1* version, please follow: [Migration Guide](../../versions/001-milestone.md)
+- L&F of about and initiator panel
+- Bug fix
 
 ## [0.2.6] -  2024-03-22
 
 ### Features
 - Layout of the debug tool window's tab panel
-- Migrate from 0.1* version, please follow: [Migration Guide](https://github.com/apihug/apihug.com/blob/master/docs/versions/001-milestone.md)
+- Migrate from 0.1* version, please follow: [Migration Guide](../../versions/001-milestone.md)
 - L&F of about and initiator panel
 - Bug fix
 
@@ -12,7 +20,7 @@
 
 ### Features
 - Pre/post script support
-- Migrate from 0.1* version, please follow: [Migration Guide](https://github.com/apihug/apihug.com/blob/master/docs/versions/001-milestone.md)
+- Migrate from 0.1* version, please follow: [Migration Guide](../../versions/001-milestone.md)
 - AST tree mock not pop up issue
 - Bug fix
 
@@ -20,7 +28,7 @@
 
 ### Features
 - Postman workspace not refresh issue
-- Migrate from 0.1* version, please follow: [Migration Guide](https://github.com/apihug/apihug.com/blob/master/docs/versions/001-milestone.md)
+- Migrate from 0.1* version, please follow: [Migration Guide](../../versions/001-milestone.md)
 - Template add linkage to the guide video linkage
 - Bug fix
 
