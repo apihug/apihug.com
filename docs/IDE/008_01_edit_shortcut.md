@@ -3,7 +3,7 @@ title: IDE Plugin Proto 编辑快捷键
 description: 编辑快捷键 shortcut
 --- 
 
-since `0.2.6`+
+since `0.2.7`+
 
 ⚠️及时更新升级ApiHug 插件⚠️
 
