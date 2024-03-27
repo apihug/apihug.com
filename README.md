@@ -44,6 +44,8 @@
 ## 📚 Tutorials
 
 1. [Hope Full Example Git](https://github.com/apihug/apihug-full-demo)
+2. [Bilibili 开始](https://www.bilibili.com/video/BV1KK421k7J8/)
+3. [Youtube 开始](https://www.youtube.com/watch?v=m6N9B6AlSmo&list=PLa8_XrY93pvpAniVC5GQ_Sckw1jvrlvxs)
 
 ## 💎 Design Principles
 
