@@ -1,4 +1,14 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
+
+## [0.2.7] -  2024-03-28
+
+### Features
+- [Shortcut](../../IDE/008_01_edit_shortcut.md) for the proto editor
+- Support HTML/Image result when debug API
+- Individual debug editor panel
+- Migrate from 0.1* version, please follow: [Migration Guide](../../versions/001-milestone.md)
+- Bug fix
+
 ## [0.2.6] -  2024-03-22
 
 ### Features
