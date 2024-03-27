@@ -18,11 +18,9 @@
 | 0.6.0-RELEASE+     | 0.2.0+       | IDE & SDK 不再往后兼容 [里程碑一](./docs/versions/001-milestone.md)|**2024-02-22**|
 | 0.5.*-RELEASE-     | 0.1.0*       | 兼容 |**2023-12-28**|
 
-⚠️ 在正式 **1.0+** 版本前， 可能存在比较多bug, 不能保证小版本的兼容， 敬请保持随时同步和更新！(加好友入群，防止惊喜变成惊讶)
+😙 SDK 版本：<a target="_blank" href="https://search.maven.org/artifact/com.apihug/it-bom"><img src="https://img.shields.io/maven-central/v/com.apihug/it-bom.svg?label=Maven%20Central" /></a> 注 Apihug 采用整包发行， Gradle plugin + SDK 统一版本。&nbsp;[CHANGELOG](./docs/release/changelog/sdk.md)
 
-😙 SDK 版本：<a target="_blank" href="https://search.maven.org/artifact/com.apihug/it-bom"><img src="https://img.shields.io/maven-central/v/com.apihug/it-bom.svg?label=Maven%20Central" /></a> 注意 Apihug 采用整包发行， Gradle plugin + 基础包公用一个版本。[CHANGELOG](./docs/release/changelog/sdk.md)
-
-💝 IDEA 插件： [ApiHug - API design Copilot](https://plugins.jetbrains.com/plugin/23534-apihug--api-design-copilot)  &nbsp;&nbsp; [Plugin Handbook](./docs/IDE/README.md)  &nbsp;&nbsp; [Plugin FAQ](./docs/IDE/999_FAQ.md)  &nbsp;&nbsp;   ![Rating](https://img.shields.io/jetbrains/plugin/r/rating/23534-apihug--api-design-copilot) ![Downloads](https://img.shields.io/jetbrains/plugin/d/23534-apihug--api-design-copilot)   [CHANGELOG](./docs/release/changelog/plugin.md)
+💝 IDEA 插件： [ApiHug - API design Copilot](https://plugins.jetbrains.com/plugin/23534-apihug--api-design-copilot)  &nbsp;&nbsp; [Plugin Handbook](./docs/IDE/README.md)  &nbsp;&nbsp; [Plugin FAQ](./docs/IDE/999_FAQ.md)  &nbsp;&nbsp;   ![Rating](https://img.shields.io/jetbrains/plugin/r/rating/23534-apihug--api-design-copilot) ![Downloads](https://img.shields.io/jetbrains/plugin/d/23534-apihug--api-design-copilot)   &nbsp;[CHANGELOG](./docs/release/changelog/plugin.md)
 
 🏠 [gitee](https://gitee.com/dearxuecom/apihug.com) | [github](https://github.com/apihug/apihug.com/)
 
@@ -38,6 +36,8 @@
 2. [ApiHug101 Youtube](https://youtube.com/@ApiHug?si=C1yw0poHA01zbmyj)
 
 ## 🔥 Handbook
+
+⚠️ 在正式 **1.0+** 版本前， 可能存在比较多bug, 不能保证小版本的兼容， 敬请保持随时同步和更新！(加好友入群，防止惊喜变成惊讶)
 
 1. [Start ApiHug in 5 Mins](./docs/handbook/001_very_begin.md)
 
