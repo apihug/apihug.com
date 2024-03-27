@@ -20,13 +20,13 @@
 
 ⚠️ 在正式 **1.0+** 版本前， 可能存在比较多bug, 不能保证小版本的兼容， 敬请保持随时同步和更新！(加好友入群，防止惊喜变成惊讶)
 
-💝 SDK 版本：<a target="_blank" href="https://search.maven.org/artifact/com.apihug/it-bom"><img src="https://img.shields.io/maven-central/v/com.apihug/it-bom.svg?label=Maven%20Central" /></a> 注意 Apihug 采用整包发行， Gradle plugin + 基础包公用一个版本。[CHANGELOG](./docs/release/changelog/sdk.md)
+😙 SDK 版本：<a target="_blank" href="https://search.maven.org/artifact/com.apihug/it-bom"><img src="https://img.shields.io/maven-central/v/com.apihug/it-bom.svg?label=Maven%20Central" /></a> 注意 Apihug 采用整包发行， Gradle plugin + 基础包公用一个版本。[CHANGELOG](./docs/release/changelog/sdk.md)
 
 💝 IDEA 插件： [ApiHug - API design Copilot](https://plugins.jetbrains.com/plugin/23534-apihug--api-design-copilot)  &nbsp;&nbsp; [Plugin Handbook](./docs/IDE/README.md)  &nbsp;&nbsp; [Plugin FAQ](./docs/IDE/999_FAQ.md)  &nbsp;&nbsp;   ![Rating](https://img.shields.io/jetbrains/plugin/r/rating/23534-apihug--api-design-copilot) ![Downloads](https://img.shields.io/jetbrains/plugin/d/23534-apihug--api-design-copilot)   [CHANGELOG](./docs/release/changelog/plugin.md)
 
 🏠 [gitee](https://gitee.com/dearxuecom/apihug.com) | [github](https://github.com/apihug/apihug.com/)
 
-🔥 [apihug-proto](https://github.com/apihug/apihug-proto/)  **proto DSL**
+😈 **一分钟**开启高质量API开发之旅：[Bilibili](https://www.bilibili.com/video/BV1KK421k7J8/) [Youtube](https://www.youtube.com/watch?v=m6N9B6AlSmo&list=PLa8_XrY93pvpAniVC5GQ_Sckw1jvrlvxs) 🔥🔥🔥
 
 ## 🖖 Intro
 
@@ -44,8 +44,7 @@
 ## 📚 Tutorials
 
 1. [Hope Full Example Git](https://github.com/apihug/apihug-full-demo)
-2. [Bilibili 开始](https://www.bilibili.com/video/BV1KK421k7J8/)
-3. [Youtube 开始](https://www.youtube.com/watch?v=m6N9B6AlSmo&list=PLa8_XrY93pvpAniVC5GQ_Sckw1jvrlvxs)
+2. [apihug-proto](https://github.com/apihug/apihug-proto/)  **proto DSL**
 
 ## 💎 Design Principles
 
