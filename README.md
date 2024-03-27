@@ -9,8 +9,6 @@
 
 <h1 align="center"> 🤗 ApiHug × {Postman|Swagger|Api...} <br/>= 快↑ 准√ 省↓</h1>
 
-<a target="_blank" href="https://search.maven.org/artifact/com.apihug/it-bom"><img src="https://img.shields.io/maven-central/v/com.apihug/it-bom.svg?label=Maven%20Central" /></a>
-
 | ApiHug          | ApiHug-IDE         | 说明        | 时间        |
 |-------------|------------|-----------|-----------|
 | 0.7.3-RELEASE+     | -       |  服务依赖Feign stub 重构，bug fix|**2024-03-18**|
@@ -18,13 +16,13 @@
 | 0.6.0-RELEASE+     | 0.2.0+       | IDE & SDK 不再往后兼容 [里程碑一](./docs/versions/001-milestone.md)|**2024-02-22**|
 | 0.5.*-RELEASE-     | 0.1.0*       | 兼容 |**2023-12-28**|
 
-😙 SDK 版本：<a target="_blank" href="https://search.maven.org/artifact/com.apihug/it-bom"><img src="https://img.shields.io/maven-central/v/com.apihug/it-bom.svg?label=Maven%20Central" /></a> 注 Apihug 采用整包发行， Gradle plugin + SDK 统一版本。&nbsp;[CHANGELOG](./docs/release/changelog/sdk.md)
+😙 SDK 版本： <a target="_blank" href="https://search.maven.org/artifact/com.apihug/it-bom"><img src="https://img.shields.io/maven-central/v/com.apihug/it-bom.svg?label=Maven%20Central" /></a> Apihug 采用整包发行， Gradle plugin + SDK 统一版本号。&nbsp;[CHANGELOG](./docs/release/changelog/sdk.md)
 
 💝 IDEA 插件： [ApiHug - API design Copilot](https://plugins.jetbrains.com/plugin/23534-apihug--api-design-copilot)  &nbsp;&nbsp; [Plugin Handbook](./docs/IDE/README.md)  &nbsp;&nbsp; [Plugin FAQ](./docs/IDE/999_FAQ.md)  &nbsp;&nbsp;   ![Rating](https://img.shields.io/jetbrains/plugin/r/rating/23534-apihug--api-design-copilot) ![Downloads](https://img.shields.io/jetbrains/plugin/d/23534-apihug--api-design-copilot)   &nbsp;[CHANGELOG](./docs/release/changelog/plugin.md)
 
 🏠 [gitee](https://gitee.com/dearxuecom/apihug.com) | [github](https://github.com/apihug/apihug.com/)
 
-😈 **一分钟**开启高质量API开发之旅：[Bilibili](https://www.bilibili.com/video/BV1KK421k7J8/) [Youtube](https://www.youtube.com/watch?v=m6N9B6AlSmo&list=PLa8_XrY93pvpAniVC5GQ_Sckw1jvrlvxs) 🔥🔥🔥
+😈 **一分钟**开启高质量API开发之旅：[Bilibili](https://www.bilibili.com/video/BV1KK421k7J8/) &nbsp;|&nbsp; [Youtube](https://www.youtube.com/watch?v=m6N9B6AlSmo&list=PLa8_XrY93pvpAniVC5GQ_Sckw1jvrlvxs) 🔥
 
 ## 🖖 Intro
 
