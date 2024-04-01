@@ -24,6 +24,8 @@
 
 😈 **一分钟**开启高质量API开发之旅：🔥 [Bilibili](https://www.bilibili.com/video/BV1KK421k7J8/) &nbsp;|&nbsp; [Youtube](https://www.youtube.com/watch?v=m6N9B6AlSmo&list=PLa8_XrY93pvpAniVC5GQ_Sckw1jvrlvxs) 🔥
 
+😏 **功能一览** [功能列表](https://apihug-com.feishu.cn/sheets/Ai1PsnPKGh0U9xt3KtDc0mj7nSg?from=from_copylink)
+
 ## 🖖 Intro
 
 1. [ApiHug 简介](./docs/introduction/what-is-apihug.md)
