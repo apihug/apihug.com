@@ -1,5 +1,20 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
+## [0.7.8-RELEASE] - 2024-04-12
+
+### Features
+
+- Move the `Repository` maintain way to `Trait` separated location, make code clean;
+- `lite` as default model for the stub side, make it more swift
+
+## [0.7.5-RELEASE] - 2024-04-10
+
+### Features
+
+- Tiny adjust of the `SecurityCustomizer` code template make the comment style perfect
+- Enhance `JWTFilter` make it support customized `jwt` pick for example from header or cookies etc.
+- Service implement right package judgement
+
 ## [0.7.4-RELEASE] - 2024-03-22
 ### Features
 - Tiny code template change: Combinator must has both authorities and roles, feign configuration comments
