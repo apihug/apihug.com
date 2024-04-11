@@ -1,14 +1,14 @@
 {
   "versions": [
     {
-      "id": "0.8.4-RELEASE",
-      "name": "0.8.4",
+      "id": "0.8.5-RELEASE",
+      "name": "0.8.5",
       "enable": true,
       "asDefault": true
     },
     {
-      "id": "0.8.3-RELEASE",
-      "name": "0.8.3",
+      "id": "0.8.1-RELEASE",
+      "name": "0.8.1",
       "enable": true
     },
     {
