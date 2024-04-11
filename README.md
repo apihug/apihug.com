@@ -11,7 +11,8 @@
 
 | ApiHug          | ApiHug-IDE         | 说明        | 时间        |
 |-------------|------------|-----------|-----------|
-| 0.7.8-RELEASE+     | -       | [SDK big change](./docs/framework/versions/0.7.8.md)  |**2024-04-10**|
+| 0.8.6-RELEASE+     | -       | [SDK Code Order Enhancement](./docs/framework/versions/0.8.6.md)  |**2024-04-11**|
+| 0.7.8-RELEASE+     | -       | [SDK Repository Enhancement](./docs/framework/versions/0.7.8.md)  |**2024-04-10**|
 | 0.7.3-RELEASE+     | -       |  服务依赖Feign stub 重构，bug fix|**2024-03-18**|
 | 0.6.9-RELEASE+     | 0.2.5+       | 支持脚本测试 [IDEA脚本](./docs/IDE/080_script.md)|**2024-03-15**|
 | 0.6.0-RELEASE+     | 0.2.0+       | IDE & SDK 不再往后兼容 [里程碑一](./docs/versions/001-milestone.md)|**2024-02-22**|

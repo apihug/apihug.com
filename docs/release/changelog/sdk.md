@@ -1,11 +1,12 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-## [0.8.5-RELEASE] - 2024-04-14
+## [0.8.6-RELEASE] - 2024-04-14
 
 ### Features
 
 - Sort `EnumWriter`, `PojoWriter`, `ServiceWriter` to avoid code conflict for merger for `ApiCollector`
 - Add sort of `getConvertersToRegister` & `basePackages` & `Database` avoid code chaos during merger!
+- fix most the code generated code order issue, relief from code merger.
 - `Java parser` not support `17` syntax
 
 ## [0.7.8-RELEASE] - 2024-04-12
