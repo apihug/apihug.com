@@ -41,7 +41,10 @@ message UploadBookCoverToLocalRequest {
 
 ## 接口定义
 
-定义接口 `consumes: "multipart/form-data"`:
+定义接口:
+
+1. `consumes: "multipart/form-data"` 必须💯
+2. `post`  必须💯
 
 ```proto
 rpc UploadBookCoverToLocal (com.novel.book.proto.api.admin.request.UploadBookCoverToLocalRequest) returns (google.protobuf.Empty) {
