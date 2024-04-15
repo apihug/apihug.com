@@ -59,7 +59,7 @@ rpc UploadBookCoverToLocal (com.novel.book.proto.api.admin.request.UploadBookCov
   }
 ```
 
-## Wire获得接口定义
+## Wire 获得接口定义
 
 ```json
   "/admin/book/upload-book-cover" : {
@@ -116,3 +116,21 @@ public class UploadBookCoverToLocalRequestMultipart extends UploadBookCoverToLoc
 ```
 
 接下来就和普通的操作文件接口一样去操作上传文件啦！
+
+```java
+/**
+   *
+   * Authorization:
+   *
+   * <ul>
+   * 	<li>PredefinedRoleCheckerType: PLATFORM</li>
+   * </ul>
+   * @apiNote
+   * 	<p>{@code /admin/book/upload-book-cover}
+   * 	<p>{@code Upload a book cover to local file system}
+   */
+  default void uploadBookCoverToLocal(SimpleResultBuilder<String> builder,
+      UploadBookCoverToLocalRequestMultipart uploadBookCoverToLocalRequestMultipart) {
+    builder.notImplemented();
+  }
+  ```
