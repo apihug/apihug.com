@@ -27,6 +27,7 @@
 | -     | [秒懂 ApiHug -017 有瑜有亮](https://www.bilibili.com/video/BV1im421n7tA/)B站| [秒懂 ApiHug -017 有瑜有亮](https://www.youtube.com/watch?v=Y1syblTKlig)Youtube|-|
 | -     | [秒懂 ApiHug -018 干湿分离](https://www.bilibili.com/video/BV1ez421r7Pd/)B站| [秒懂 ApiHug -018 干湿分离](https://www.youtube.com/watch?v=KCRap3rDJ54)Youtube|-|
 | 教程     | [如何文件上传](./how/001_how_support_upload_files.md)       | 站内  |-|
+| -     | [如何设置HTTP头或cookie](./how/002_how_set_header_or_cooike.md)       | 站内  |-|
 
 ## Index
 
