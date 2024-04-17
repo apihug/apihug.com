@@ -36,8 +36,6 @@
 4. [Wire - 协议定义](./004_dsl_implement_wire.md)
 5. [Stub - 模板代码生成](./005_dsl_implement_stub.md)
 
-🧰 Know [How](./how/)
-
 ## Reference
 
 1. [ApiHug101-Bilibili](https://space.bilibili.com/666522636)
