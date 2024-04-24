@@ -1,5 +1,13 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
+## [0.9.0-RELEASE] - 2024-04-24
+
+### Features
+
+- Bug in View generator
+- experiment Stub function: generator the mybatis DSL for the view `stub -DenableExperiment=true` to enable it!
+
+
 ## [0.8.6-RELEASE] - 2024-04-14
 
 ### Features
