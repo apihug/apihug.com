@@ -1,5 +1,13 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
+
+## [0.9.1-RELEASE] - 2024-04-25
+
+### Features
+
+- Add security empty wrapper which can skip no context set up issue
+- Bug in view Mybatis join generator
+
 ## [0.9.0-RELEASE] - 2024-04-24
 
 ### Features
