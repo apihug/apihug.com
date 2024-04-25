@@ -1,5 +1,56 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
+## [0.3.3] -  2024-04-26
+
+### Features
+- Adjust Dialog size to make it more comfortable
+- remove keep original response, as this is deprecated from the proto DSL
+- Add more template package layout when generate the application project
+- Migrate from 0.1* version, please follow: [Migration Guide](../../versions/001-milestone.md)
+- Bug fix
+
+## [0.3.2] -  2024-04-20
+
+### Features
+- Spring main template enhancement
+- Show enum detail review in the API design panel
+- Migrate from 0.1* version, please follow: [Migration Guide](../../versions/001-milestone.md)
+- Bug fix
+
+
+## [0.3.1] -  2024-04-18
+
+### Features
+- Code template import self proto conflict issue
+- Dialog size adjust make it more conformable
+- Migrate from 0.1* version, please follow: [Migration Guide](../../versions/001-milestone.md)
+- Bug fix
+
+
+## [0.3.0] -  2024-04-12
+
+### Features
+- Export server choice list, index out of bound bug;
+- Migrate from 0.1* version, please follow: [Migration Guide](../../versions/001-milestone.md)
+- Bug fix
+
+## [0.2.9] -  2024-04-08
+
+### Features
+- Add entity logic bug: pick wrong field name
+- Light PSI refresh issue
+- Migrate from 0.1* version, please follow: [Migration Guide](../../versions/001-milestone.md)
+- Bug fix
+
+
+## [0.2.8] -  2024-04-04
+
+### Features
+- Continue edit proto context
+- Api compare tool
+- Migrate from 0.1* version, please follow: [Migration Guide](../../versions/001-milestone.md)
+- Bug fix
+
 ## [0.2.7] -  2024-03-28
 
 ### Features
