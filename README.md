@@ -18,6 +18,8 @@
 | 0.6.0-RELEASE+     | 0.2.0+       | IDE & SDK 不再往后兼容 [里程碑一](./docs/versions/001-milestone.md)|**2024-02-22**|
 | 0.5.*-RELEASE-     | 0.1.0*       | 兼容 |**2023-12-28**|
 
+🦄 [apihug.com](https://apihug.github.io) github host apihug homepage.
+
 😙 SDK 版本： <a target="_blank" href="https://search.maven.org/artifact/com.apihug/it-bom"><img src="https://img.shields.io/maven-central/v/com.apihug/it-bom.svg?label=Maven%20Central" /></a> &nbsp;Apihug 采用整包发行，Gradle plugin + SDK 统一版本号 &nbsp;[CHANGELOG](./docs/release/changelog/sdk.md)
 
 💝 IDEA 插件： [ApiHug - API design Copilot](https://plugins.jetbrains.com/plugin/23534-apihug--api-design-copilot)  &nbsp;&nbsp; [Handbook](./docs/IDE/README.md)  &nbsp;&nbsp; [FAQ](./docs/IDE/999_FAQ.md)  &nbsp;&nbsp;   ![Rating](https://img.shields.io/jetbrains/plugin/r/rating/23534-apihug--api-design-copilot) ![Downloads](https://img.shields.io/jetbrains/plugin/d/23534-apihug--api-design-copilot)   &nbsp;[CHANGELOG](./docs/release/changelog/plugin.md)
