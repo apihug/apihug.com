@@ -55,7 +55,7 @@ after all the error gone,  then rebuild, everything goes well again!
 
 ## New Feature
 
-Support customize the column name strategy:
+### Support customize the column name strategy
 
 in the `hope-wire.json` define:
 
@@ -81,3 +81,40 @@ in the `hope-wire.json` define:
    4. `CAPITALIZE`:  `userName` -> `UserName`
 3. Exception: if you set column name manually in the proto already, this will always be the highest priority!
 4. `hope.common.persistence.plugin.NameMappingStrategy` client plugin to rename the column name.
+
+### Support Only Proto build strategy
+
+Latest Plugin(since 0.4.0), project template will introduce build proto modules only flag.
+
+But if your project already exist please follow this to update to support, as this ony some gradle tricky.
+
+open: `{PROJECT}/settings.gradle`:
+
+1. replace `YOUR_PROTO_MODULE` with your proto module;
+2. replace `YOUR_APP_MODULE` with your app module;
+
+```groovy
+def onlyProto = System.getProperty("onlyProto")?.toString();
+
+if(onlyProto ==null){
+    onlyProto = System.getenv('onlyProto')?.toString();
+}
+
+// If onlyProto property is not set or is not a valid boolean, default to false
+// `-DonlyProto=true` to enable this
+onlyProto = onlyProto != null ? onlyProto.toBoolean() : false
+
+// Include
+include('YOUR_PROTO_MODULE')
+
+if(!onlyProto) {
+    include('YOUR_APP_MODULE')
+}else{
+    logger.quiet "-DonlyProto=true so no app modules will be included"
+}
+
+```
+
+Then you can use this shell:  `gradlew clean build -x test -x wireTest -DonlyProto=true`，
+
+to build your proto modules quickly, especially when you has broken update in the proto!
