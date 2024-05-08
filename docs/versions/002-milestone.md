@@ -52,3 +52,32 @@ message Meta {
 5. change all the `cn_message` in `proto` to  `message2`, as the `cn_message` will be removed soon.
 
 after all the error gone,  then rebuild, everything goes well again!
+
+## New Feature
+
+Support customize the column name strategy:
+
+in the `hope-wire.json` define"
+
+```json
+{
+  "persistence": {
+    "identifyType": "LONG",
+    "tenantType": "LONG",
+    "format": "CAMEL",
+    "upper": "UPPER"
+  }
+}
+```
+
+1. Format
+  1. `DEFAULT`: as old framework, convert to `SNAKE` style
+  2. `CAMEL`: `myVariableName`
+  3. `SNAKE`: `my_variable_name`
+2. Upper
+  1. `DEFAULT`:as old framework, convert to `UPPER` style
+  2. `UPPER`: `name` -> `NAME`
+  3. `LOWER`: `NAME` -> `name`
+  4. `CAPITALIZE`:  `userName` -> `UserName`
+3. Exception: if you set column name manually in the proto already, this will always be the highest priority!
+4. `hope.common.persistence.plugin.NameMappingStrategy` client plugin to rename the column name.
