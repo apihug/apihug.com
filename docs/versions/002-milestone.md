@@ -48,5 +48,6 @@ message Meta {
 1. reload the gradle
 2. exist-enum wire class will report error `descriptionZhCN` overwrite illegal;
 3. try to find all the `descriptionZhCN` of the enum replace them with `description2`
+4. change all the `cn_message` in `proto` to  `message2`, as the `cn_message` will be removed soon.
 
 after all the error gone,  then rebuild, everything goes well again!
