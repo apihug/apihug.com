@@ -40,7 +40,7 @@ message Meta {
 
 1. upgrade the IDEA plugin to `0.4.0`+
 2. upgrade the SDK to `0.9.8-RELEASE`+
-   1. go project: `{PROJECT}/gradle/libs.versions.toml`
+   1. open file: `{PROJECT}/gradle/libs.versions.toml`
    2. find and update: `apihug = "OLD_VERSION"` -> `0.9.8-RELEASE`+
 
 ### Code change
