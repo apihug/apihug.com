@@ -57,7 +57,7 @@ after all the error gone,  then rebuild, everything goes well again!
 
 Support customize the column name strategy:
 
-in the `hope-wire.json` define"
+in the `hope-wire.json` define:
 
 ```json
 {
@@ -71,13 +71,13 @@ in the `hope-wire.json` define"
 ```
 
 1. Format
-  1. `DEFAULT`: as old framework, convert to `SNAKE` style
-  2. `CAMEL`: `myVariableName`
-  3. `SNAKE`: `my_variable_name`
+   1. `DEFAULT`: as old framework, convert to `SNAKE` style
+   2. `CAMEL`: `myVariableName`
+   3. `SNAKE`: `my_variable_name`
 2. Upper
-  1. `DEFAULT`:as old framework, convert to `UPPER` style
-  2. `UPPER`: `name` -> `NAME`
-  3. `LOWER`: `NAME` -> `name`
-  4. `CAPITALIZE`:  `userName` -> `UserName`
+   1. `DEFAULT`:as old framework, convert to `UPPER` style
+   2. `UPPER`: `name` -> `NAME`
+   3. `LOWER`: `NAME` -> `name`
+   4. `CAPITALIZE`:  `userName` -> `UserName`
 3. Exception: if you set column name manually in the proto already, this will always be the highest priority!
 4. `hope.common.persistence.plugin.NameMappingStrategy` client plugin to rename the column name.
