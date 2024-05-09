@@ -9,9 +9,130 @@ description: Authentication & Authorization, JWT, RBAC
 
 ## Authorization
 
-### RBAC
+How to check the authorities of a login account， you need 3 steps:
 
-极简RBAC:
+1. define a resource(API path)'s authorization properties
+2. login account security context customization
+3. setup the account and authorities mapping
+
+### Define resource authorization
+
+check [Milestone#code](../versions/001-milestone.md#code) `rbac `part:
+
+![authorization](../public/image/framework/authorization.png)
+
+#### **1.** setup the authority enum:
+
+```protobuf
+enum  BookAuthorityEnum {
+
+    option (hope.swagger.enm) = {
+        description: "Authority used in book project"
+    };
+
+    BOOK_ADD = 0 [(hope.constant.field) = {code: 1,message: "book:add", message2: "Authority to add book"}];
+    BOOK_DELETE = 1 [(hope.constant.field) = {code: 2,message: "book:remove", message2: "Authority to delete book"}];
+    BOOK_MODIFY = 2 [(hope.constant.field) = {code: 3,message: "book:modify", message2: "Authority to modify book"}];
+
+}
+```
+
+#### **2.** update the `hope-wire.json` of the proto module:
+
+```json
+  "authority" : {
+    "enumClass" : "com.novel.book.proto.infra.settings.BookAuthorityEnum",
+    "codePrefix" : 10240000
+  }
+```
+
+#### **3.** protected your resource:
+
+```protobuf
+
+  rpc ListCategory (com.novel.book.proto.api.admin.request.CategoryListRequest) returns (com.novel.book.proto.api.admin.response.CategoryVoResponse) {
+    option (hope.swagger.operation) = {
+      get: "/list-category";
+      description: "list all the categories support";
+      priority: MIDDLE;
+      out_plural: true;
+      authorization:{
+        rbac:{
+          authorities: "BOOK_DELETE";
+          combinator: OR;
+          predefined_role_checker: PLATFORM_MANAGER
+        }
+      }
+    };
+  }
+```
+
+#### **4.** runtime configuration
+
+Those configuration happen on your application module instead of the proto module:
+
+find the auto generated code template at your application project's package : `${PKG}.infra.security` (domain as `Book` example):
+
+```shell
+    1. AnonymousBookCustomer.java       
+    2. BookCustomer.java                
+    3. BookJWTPicker.java               
+    4. BookQuickCustomerRoleChecker.java
+    5. BookSecurityCustomerContextCustomizer.java
+    6. BookSecurityCustomizer.java
+```
+
+| Class          | Usage         | Comment        |
+|-------------|------------|-----------|
+|AnonymousBookCustomer|Anonymous Customer definition| usually no need to update|
+|BookCustomer|Customer used in the security context| extend for additional fields for dynamically loaded, like authorities, usually BookSecurityCustomerContextCustomizer response for new and wrapper it, need extend |
+|BookJWTPicker|Where to pick the JWT|usually from header, but you can pick from session or cookies|
+|BookQuickCustomerRoleChecker|Quick Platform\Tenant role checker| usually need to extend |
+|BookSecurityCustomerContextCustomizer|response for Security context customer initialized| more detail info to/from token, create new Customer like delegate authorities/role fetcher|
+|BookSecurityCustomizer|Security configuration customize| change global resource security strategy: like default access check, or any specific path or context |
+
+#### **5.** Last piece
+
+This is not what the framework can supply, this is your application, how to set up your account with the authorities mapping.
+
+Best practice is to follow the role based access control that is **RBAC**.
+
+SO you may leverage the Authority Enum for example `BookAuthorityEnum`'s message pattern to organize your authorities hierarchy structure:
+
+for example your authorities enum may include:
+
+```protobuf
+
+BOOK_ADD: book:add
+BOOK_DELETE: book:delete
+USER_BLOCK: user:block
+USER_EDIT: user:edit
+ORDER_APPROVE:order:approve
+ORDER_DELETE:order:delete
+ORDER_MODIFY:order:modify
+
+```
+
+so the hierarchy may looks like:
+
+```shell
+
++---book
+|       add
+|       delete
+|
++---user
+|       block
+|       edit
+|
++---order
+|       approve
+|       delete
+|       modify
+
+```
+
+㊗️ so enjoy!
 
 ## Reference
 

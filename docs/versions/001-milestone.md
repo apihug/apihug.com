@@ -82,7 +82,7 @@
           combinator: OR;
           predefined_role_checker: PLATFORM_MANAGER
         }
-      }
+      
 ```
 
 **Change TO**:
@@ -93,7 +93,6 @@
           combinator: OR;
           predefined_role_checker: PLATFORM_MANAGER
         }
-      }
 ```
 
 🥳🥳🥳 all done!
