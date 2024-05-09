@@ -21,7 +21,7 @@ check [Milestone#code](../versions/001-milestone.md#code) `rbac `part:
 
 ![authorization](../public/image/framework/authorization.png)
 
-#### **1.** setup the authority enum:
+#### **1.** setup the authority enum
 
 ```protobuf
 enum  BookAuthorityEnum {
@@ -37,7 +37,7 @@ enum  BookAuthorityEnum {
 }
 ```
 
-#### **2.** update the `hope-wire.json` of the proto module:
+#### **2.** update the `hope-wire.json` of the proto module
 
 ```json
   "authority" : {
@@ -46,7 +46,7 @@ enum  BookAuthorityEnum {
   }
 ```
 
-#### **3.** protected your resource:
+#### **3.** protect your resource
 
 ```protobuf
 
@@ -69,7 +69,7 @@ enum  BookAuthorityEnum {
 
 #### **4.** runtime configuration
 
-Those configuration happen on your application module instead of the proto module:
+Those configuration will happen on your application module instead of the proto module:
 
 find the auto generated code template at your application project's package : `${PKG}.infra.security` (domain as `Book` example):
 
@@ -85,21 +85,21 @@ find the auto generated code template at your application project's package : `$
 | Class          | Usage         | Comment        |
 |-------------|------------|-----------|
 |AnonymousBookCustomer|Anonymous Customer definition| usually no need to update|
-|BookCustomer|Customer used in the security context| extend for additional fields for dynamically loaded, like authorities, usually BookSecurityCustomerContextCustomizer response for new and wrapper it, need extend |
+|BookCustomer|Customer used in the security context| extend for additional fields for dynamically loaded, like authorities, usually BookSecurityCustomerContextCustomizer response for init and wrapper it, need extend |
 |BookJWTPicker|Where to pick the JWT|usually from header, but you can pick from session or cookies|
 |BookQuickCustomerRoleChecker|Quick Platform\Tenant role checker| usually need to extend |
-|BookSecurityCustomerContextCustomizer|response for Security context customer initialized| more detail info to/from token, create new Customer like delegate authorities/role fetcher|
-|BookSecurityCustomizer|Security configuration customize| change global resource security strategy: like default access check, or any specific path or context |
+|BookSecurityCustomerContextCustomizer|response for Security context customer initialization| more detail info to/from token, create new Customer like delegate authorities/role fetcher|
+|BookSecurityCustomizer|Security configuration customize| change global security strategy: like default access check, or specific rule for specific path |
 
 #### **5.** Last piece
 
-This is not what the framework can supply, this is your application, how to set up your account with the authorities mapping.
+This is not what the framework can supply as this depend on your business logic: how to set up your account relationship with the authorities list.
 
 Best practice is to follow the role based access control that is **RBAC**.
 
-SO you may leverage the Authority Enum for example `BookAuthorityEnum`'s message pattern to organize your authorities hierarchy structure:
+SO you may leverage the Authority Enum for example `BookAuthorityEnum`'s message pattern to organize your authorities hierarchy:
 
-for example your authorities enum may include:
+Take this book application as example:
 
 ```protobuf
 
