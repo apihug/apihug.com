@@ -2,6 +2,8 @@
 
 This milestone for the eventually SDK 1.0.0 release preparation;
 
+Since `2024-05-10`, this upgrade may introduce code broken!⚠️
+
 ## Rename  `cn_message` to `message2`
 
 Remove the support for  `cn_message` use the `message2` instead for the constant option;
