@@ -84,12 +84,12 @@ find the auto generated code template at your application project's package : `$
 
 | Class          | Usage         | Comment        |
 |-------------|------------|-----------|
-|AnonymousBookCustomer|Anonymous Customer definition| usually no need to update|
-|BookCustomer|Customer used in the security context| extend for additional fields for dynamically loaded, like authorities, usually BookSecurityCustomerContextCustomizer response for init and wrapper it, need extend |
-|BookJWTPicker|Where to pick the JWT|usually from header, but you can pick from session or cookies|
-|BookQuickCustomerRoleChecker|Quick Platform\Tenant role checker| usually need to extend |
-|BookSecurityCustomerContextCustomizer|response for Security context customer initialization| more detail info to/from token, create new Customer like delegate authorities/role fetcher|
-|BookSecurityCustomizer|Security configuration customize| change global security strategy: like default access check, or specific rule for specific path |
+|Anonymous`Book`Customer|Anonymous Customer definition| usually no need to update|
+|`Book`Customer|Customer used in the security context| extend for additional fields for dynamically loaded, like authorities, usually `Book`SecurityCustomerContextCustomizer response for init and wrapper it, need extend |
+|`Book`JWTPicker|Where to pick the JWT|usually from header, but you can pick from session or cookies|
+|`Book`QuickCustomerRoleChecker|Quick Platform\Tenant role checker| usually need to extend |
+|`Book`SecurityCustomerContextCustomizer|response for Security context customer initialization| more detail info to/from token, create new Customer like delegate authorities/role fetcher|
+|`Book`SecurityCustomizer|Security configuration customize| change global security strategy: like default access check, or specific rule for specific path |
 
 #### **5.** Last piece
 
