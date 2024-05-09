@@ -2,6 +2,8 @@
 
 This milestone for the eventually SDK 1.0.0 release preparation;
 
+## Rename  `cn_message` to `message2`
+
 Remove the support for  `cn_message` use the `message2` instead for the constant option;
 
 ```protobuf
@@ -30,9 +32,9 @@ message Meta {
 }
 ```
 
-## Migration steps
+### Migration steps
 
-### Prepare
+#### Prepare
 
 <a target="_blank" href="https://search.maven.org/artifact/com.apihug/it-bom"><img src="https://img.shields.io/maven-central/v/com.apihug/it-bom.svg?label=Maven%20Central" /></a>
 
@@ -43,7 +45,7 @@ message Meta {
    1. open file: `{PROJECT}/gradle/libs.versions.toml`
    2. find and update: `apihug = "OLD_VERSION"` -> `0.9.8-RELEASE`+
 
-### Code change
+#### Code change
 
 1. reload the gradle
 2. exist-enum wire class will report error `descriptionZhCN` overwrite illegal;
@@ -81,6 +83,21 @@ in the `hope-wire.json` define:
    4. `CAPITALIZE`:  `userName` -> `UserName`
 3. Exception: if you set column name manually in the proto already, this will always be the highest priority!
 4. `hope.common.persistence.plugin.NameMappingStrategy` client plugin to rename the column name.
+
+case **3**, the column will always be `MY_USER_NAME` as manually set as: `name: "MY_USER_NAME"`;
+
+```protobuf
+  string user_name = 1 [(hope.persistence.column) = {
+    name: "MY_USER_NAME",
+    description: "name of the account",
+    nullable: FALSE,
+    updatable: FALSE,
+    length: {
+      value: 32
+    },
+    type: VARCHAR
+  }];
+  ```
 
 ### Support Only Proto build strategy
 
