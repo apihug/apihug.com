@@ -57,7 +57,7 @@ after all the error gone,  then rebuild, everything goes well again!
 
 ## New Feature
 
-### Support customize the column name strategy
+### Support Entity Column Name Customization
 
 in the `hope-wire.json` define:
 
@@ -99,7 +99,7 @@ case **3**, the column will always be `MY_USER_NAME` as manually set as: `name: 
   }];
   ```
 
-### Support Only Proto build strategy
+### Support Only Proto Build Strategy
 
 Latest Plugin(since 0.4.0), project template will introduce build proto modules only flag.
 
