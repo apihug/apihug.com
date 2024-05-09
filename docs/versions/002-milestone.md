@@ -86,7 +86,7 @@ in the `hope-wire.json` define:
 
 Latest Plugin(since 0.4.0), project template will introduce build proto modules only flag.
 
-But if your project already exist please follow this to update to support, as this ony some gradle tricky.
+But if your project already exist please follow this to update to support, as this only some gradle tricky.
 
 open: `{PROJECT}/settings.gradle`:
 
