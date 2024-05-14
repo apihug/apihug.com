@@ -1,5 +1,23 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
+## [0.4.0] -  2024-05-11
+
+### Features
+- Upgrade to **0.4.0+**, please follow: [Migration Guide](https://github.com/apihug/apihug.com/blob/master/docs/versions/002-milestone.md) to migrate;
+- `cn_message` rename to `message2`,since SDK `0.9.8-RELEASE`, `message2` for second language not specific to cn;
+- rename `UPPER_FIRST`  to `CAPITALIZE`, more straightforward;
+- Bug fix
+
+
+## [0.3.4] -  2024-05-08
+
+### Features
+- More diagnose detail for network error
+- Default apihug meta version format wrong
+- Persistence configuration for format and case when generate column
+- Migrate from 0.1* version, please follow: [Migration Guide](https://github.com/apihug/apihug.com/blob/master/docs/versions/001-milestone.md)
+- Bug fix
+
 ## [0.3.3] -  2024-04-26
 
 ### Features
