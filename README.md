@@ -19,7 +19,7 @@
 | 0.6.0-RELEASE+     | 0.2.0+       | IDE & SDK 不再往后兼容 [里程碑一](./docs/versions/001-milestone.md)|**2024-02-22**|
 | 0.5.*-RELEASE-     | 0.1.0*       | 兼容 |**2023-12-28**|
 
-🦄 **[apihug.com](https://apihug.github.io/?from=git)** github host apihug homepage. 🥳
+🦄 **[apihug.com](https://apihug.com/?from=git)** github host apihug homepage. [backup](https://apihug.github.io/?from=git) 🥳
 
 😙 SDK 版本： <a target="_blank" href="https://search.maven.org/artifact/com.apihug/it-bom"><img src="https://img.shields.io/maven-central/v/com.apihug/it-bom.svg?label=Maven%20Central" /></a> &nbsp;Apihug 采用整包发行，Gradle plugin + SDK 统一版本号 &nbsp;[CHANGELOG](./docs/release/changelog/sdk.md)
 
