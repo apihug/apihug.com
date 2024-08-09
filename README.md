@@ -66,4 +66,6 @@
 
 ---
 
+mail: **apihug@163.com** | **thirdson@163.com**
+
 ![api-hug-contact](./docs/public/image/apihug-001.gif)
