@@ -11,6 +11,7 @@
 
 | ApiHug          | ApiHug-IDE         | 说明        | 时间        |
 |-------------|------------|-----------|-----------|
+| 1.0.8-RELEASE+     | 0.5.0+       | 支持 [lint 检查API](https://apihug.com/docs/tool/apihug-lint)|**2024-08-28**|
 | 1.0.0-RELEASE+     | 0.5.0+       | [里程碑三](https://apihug.com/docs/kola#upgrade-steps)|**2024-08-06**|
 | 0.9.8-RELEASE+     | 0.4.0+       | [里程碑二](./docs/versions/002-milestone.md)|**2024-05-10**|
 | 0.8.6-RELEASE+     | -       | [SDK Code Order Enhancement](./docs/framework/versions/0.8.6.md)  |**2024-04-11**|
