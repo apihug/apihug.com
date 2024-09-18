@@ -3,7 +3,49 @@ title: IDE 知识库
 description: 知识库管理
 ---
 
+## 0.5.4 upgrade
+
+[014 Knowledge Settings](https://apihug.com/docs/idea/014-settings-knowledge) new web site;
+
+Since IDEA Plugin `0.5.4`+  we move maintain of the knowledge as Project framework meta data, so you:
+
+1. need to keep it in project source code to leverage the version control;
+2. each module(domain) will has its own domain knowledge base;
+
+The knowledge base configuration will host `{WIRE_MODULE}/src/main/resources/hope-knowledge.json`, please refer to this [sample](https://github.com/apihug/apihug-demo/blob/main/apihug-demo-proto/src/main/resources/hope-knowledge.json).
+
+```json
+{
+  "knowledge" : [ {
+    "name" : "user_name",
+    "description" : "name of user",
+    "attributeType" : "STRING",
+    "notNull" : false,
+    "notEmpty" : false,
+    "notBlank" : true,
+    "pattern" : "",
+    "minLength" : 1,
+    "maxLength" : 64,
+    "sample" : "jake",
+    "trackId" : "04b01f17-dc5b-44ce-b7ad-da7744dae723",
+    "usage" : "BOTH"
+  } ],
+  "name" : "apihug-demo-proto",
+  "application" : "apihug-demo",
+  "packageName" : "com.apihug.sample",
+  "domain" : "sample",
+  "identifier" : "apihug-demo-proto",
+  "module" : "apihug-demo-proto"
+}
+```
+
+All other behavior keep same!
+
+---
+
 ⚠️⚠️ After IDEA Plugin `0.2.6`+
+
+⚠️Decoded after 0.5.4⚠️
 
 **SDK**: <a target="_blank" href="https://search.maven.org/artifact/com.apihug/it-bom"><img src="https://img.shields.io/maven-central/v/com.apihug/it-bom.svg?label=Maven%20Central" /></a>  
 
