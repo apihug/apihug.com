@@ -23,7 +23,7 @@
 
 🤟 **Plugin 0.5.6+** 引入了 [ApiSmart](https://apihug.com/docs/copilot) ;  
 
-💕 ApiSmart make your api design and implement happier; 让你编程不在寂寞 :-)
+💕 ApiSmart make your api design and implement happier; 让你编程不再寂寥 :-)
 
 🦄 **[apihug.com](https://apihug.com/?from=git)** github host apihug homepage. [backup](https://apihug.github.io/?from=git) 🥳
 
