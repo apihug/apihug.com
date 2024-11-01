@@ -21,7 +21,9 @@
 | 0.6.0-RELEASE+     | 0.2.0+       | IDE & SDK 不再往后兼容 [里程碑一](./docs/versions/001-milestone.md)|**2024-02-22**|
 | 0.5.*-RELEASE-     | 0.1.0*       | 兼容 |**2023-12-28**|
 
-🤟 **Plugin 0.5.6+** 引入了 [ApiSmart](https://apihug.com/docs/copilot);ApiSmart make your api design and implement happier; 让你编程不在寂寞 :-)
+🤟 **Plugin 0.5.6+** 引入了 [ApiSmart](https://apihug.com/docs/copilot) ;  
+
+💕 ApiSmart make your api design and implement happier; 让你编程不在寂寞 :-)
 
 🦄 **[apihug.com](https://apihug.com/?from=git)** github host apihug homepage. [backup](https://apihug.github.io/?from=git) 🥳
 
