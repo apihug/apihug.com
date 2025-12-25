@@ -1,19 +1,19 @@
 {
   "versions": [
     {
-      "id": "2.0.7-RELEASE",
-      "name": "2.0.7",
+      "id": "2.0.8-RELEASE",
+      "name": "2.0.8",
       "enable": true,
       "asDefault": true
     },
     {
-      "id": "2.0.6-RELEASE",
-      "name": "2.0.6",
+      "id": "2.0.7-RELEASE",
+      "name": "2.0.7",
       "enable": false
     },
     {
-      "id": "2.0.5-RELEASE",
-      "name": "2.0.5",
+      "id": "2.0.6-RELEASE",
+      "name": "2.0.6",
       "enable": false
     }
   ]
