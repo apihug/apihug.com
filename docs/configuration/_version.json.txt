@@ -1,8 +1,8 @@
 {
   "versions": [
     {
-      "id": "2.4.9-RELEASE",
-      "name": "2.4.9",
+      "id": "2.5.0-RELEASE",
+      "name": "2.5.0",
       "enable": true,
       "asDefault": true
     },
