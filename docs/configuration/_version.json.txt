@@ -1,8 +1,8 @@
 {
   "versions": [
     {
-      "id": "2.6.5-RELEASE",
-      "name": "2.6.5",
+      "id": "3.0.3-RELEASE",
+      "name": "3.0.3",
       "enable": true,
       "asDefault": true
     },
